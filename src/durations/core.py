@@ -33,4 +33,16 @@ def format_duration(seconds):
     The inverse of parse_duration: format_duration(5400) == "1h30m".
     Zero formats as "0s". Units that contribute nothing are omitted.
     """
-    raise NotImplementedError("format_duration is not implemented yet")
+    if isinstance(seconds, bool) or not isinstance(seconds, int):
+        raise TypeError("duration must be a whole number of seconds")
+    if seconds < 0:
+        raise ValueError("duration must not be negative")
+
+    parts = []
+    remaining = seconds
+    for unit, size in _UNITS.items():
+        count, remaining = divmod(remaining, size)
+        if count:
+            parts.append("%d%s" % (count, unit))
+
+    return "".join(parts) or "0s"
