@@ -1,0 +1,36 @@
+{
+  "id": "teriyaki-flank-steak",
+  "title": "Teriyaki-Glazed Flank Steak",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "beef",
+  "genre": "japanese",
+  "status": "draft",
+  "serves": 5,
+  "time": {"active_min": 25, "total_min": 75},
+  "summary": "Two flank steaks, soy-mirin marinade, grilled hot and brushed with the reduced marinade so the glaze sets instead of burning.",
+  "tags": ["grill", "marinade", "family-size"],
+  "pairs_with": ["miso-brown-butter-mash", "charred-broccoli-chili-crisp", "wasabi-crema", "roasted-chili-broccoli"],
+  "ingredients": [
+    {"id": "steak", "qty": 3.5, "unit": "lb", "item": "flank steak", "note": "two steaks; this household eats the second one"},
+    {"id": "soy", "qty": 0.75, "unit": "cup", "item": "soy sauce", "group": "Marinade and glaze"},
+    {"id": "mirin", "qty": 0.5, "unit": "cup", "item": "mirin", "group": "Marinade and glaze"},
+    {"id": "brown-sugar", "qty": 0.333, "unit": "cup", "item": "brown sugar", "group": "Marinade and glaze"},
+    {"id": "sake", "qty": 0.25, "unit": "cup", "item": "sake or dry sherry", "optional": true, "group": "Marinade and glaze"},
+    {"id": "garlic", "qty": 4, "unit": "cloves", "item": "garlic", "prep": "grated", "group": "Marinade and glaze"},
+    {"id": "ginger", "qty": 2, "unit": "tbsp", "item": "fresh ginger", "prep": "grated", "group": "Marinade and glaze"},
+    {"id": "sesame-oil", "qty": 1, "unit": "tbsp", "item": "toasted sesame oil", "group": "Marinade and glaze"},
+    {"id": "cornstarch", "qty": 1, "unit": "tsp", "item": "cornstarch", "note": "for the glaze only"},
+    {"id": "scallions", "qty": 3, "item": "scallions", "prep": "thinly sliced", "group": "To finish"},
+    {"id": "sesame-seeds", "qty": 1, "unit": "tbsp", "item": "toasted sesame seeds", "group": "To finish"}
+  ],
+  "steps": [
+    {"title": "Marinade", "text": "Whisk the soy sauce, mirin, brown sugar, sake, garlic, ginger and sesame oil until the sugar dissolves. Pour off and refrigerate 1 cup of it for the glaze before the meat goes anywhere near it.", "uses": ["soy", "mirin", "brown-sugar", "sake", "garlic", "ginger", "sesame-oil"]},
+    {"title": "Marinate", "text": "Put both steaks in a zip bag with the rest of the marinade, press out the air, and refrigerate 45 minutes to 4 hours. Pull them 30 minutes before grilling.", "uses": ["steak"], "timer_min": 45},
+    {"title": "Glaze", "text": "Simmer the reserved cup in a small pan. Stir the cornstarch into 1 tablespoon of water, whisk it in, and cook until it coats a spoon, about 3 minutes. Keep warm.", "uses": ["cornstarch"], "timer_min": 3},
+    {"title": "Grill", "text": "Two zones, hot side ripping. Pat the steaks mostly dry and sear 4 to 5 minutes per side for medium-rare, 125 to 130°F. Sugar in the marinade means the outside will darken fast; move to the cool side if it blackens before the center is there.", "uses": ["steak"], "timer_min": 4},
+    {"title": "Brush and rest", "text": "In the last minute, brush both sides with the glaze. Rest 10 minutes on a board.", "uses": [], "timer_min": 10},
+    {"title": "Slice", "text": "Slice thin against the grain. Spoon more glaze over the slices and finish with scallions and sesame seeds.", "uses": ["scallions", "sesame-seeds"]}
+  ],
+  "notes": "Reconstructed from the meal in the cooking skill. The plate is sweet and rich, so the sides carry the acid, salt and heat: miso mash, chili crisp broccoli, wasabi crema on the side. Serves is the household, not a nominal four."
+}

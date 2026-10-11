@@ -1,0 +1,29 @@
+{
+  "id": "charred-broccoli-chili-crisp",
+  "title": "Charred Broccoli with Chili Crisp",
+  "role": "side",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "any",
+  "status": "draft",
+  "serves": 5,
+  "time": {"active_min": 10, "total_min": 25},
+  "summary": "Broccoli blasted under the broiler or on the grill until the edges blacken, then tossed with chili crisp. Crunch and heat against a rich main.",
+  "tags": ["broiler", "grill", "vegetable", "fast"],
+  "pairs_with": ["teriyaki-flank-steak", "korean-bbq-chicken"],
+  "ingredients": [
+    {"id": "broccoli", "qty": 2, "unit": "lb", "item": "broccoli", "prep": "cut into long florets, stems peeled and sliced"},
+    {"id": "oil", "qty": 2, "unit": "tbsp", "item": "neutral oil"},
+    {"id": "salt", "qty": 1, "unit": "tsp", "item": "kosher salt"},
+    {"id": "chili-crisp", "qty": 3, "unit": "tbsp", "item": "chili crisp", "note": "with plenty of the solids, not just the oil"},
+    {"id": "soy", "qty": 1, "unit": "tsp", "item": "soy sauce"},
+    {"id": "lemon", "qty": 0.5, "item": "lemon"}
+  ],
+  "steps": [
+    {"title": "Heat", "text": "Broiler on high with a rack 5 inches from the element and a sheet pan preheating, or the hot zone of the grill with a grill basket.", "uses": []},
+    {"title": "Oil and salt", "text": "Toss the broccoli with the oil and salt. Keep it lightly coated; too much oil steams instead of chars.", "uses": ["broccoli", "oil", "salt"]},
+    {"title": "Char", "text": "Spread in one layer and leave it alone until the tops blacken in spots, 6 to 8 minutes. Turn once and give it 3 to 4 more. You want real char on the florets with the stems still snappy.", "uses": ["broccoli"], "timer_min": 7},
+    {"title": "Dress", "text": "Back in the bowl, hot. Toss with the chili crisp and soy sauce, squeeze the lemon over, and taste. If the main is already salty-sweet, the lemon is doing the most important work.", "uses": ["chili-crisp", "soy", "lemon"]}
+  ],
+  "notes": "Reconstructed from the cooking skill's record of the meal. If wasabi crema is also on the table, that is two heat sources; serve the crema on the side so people pick one."
+}

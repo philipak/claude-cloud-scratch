@@ -1,0 +1,29 @@
+{
+  "id": "wasabi-crema",
+  "title": "Wasabi Crema",
+  "role": "sauce",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "any",
+  "status": "draft",
+  "serves": 5,
+  "time": {"active_min": 5, "total_min": 5},
+  "summary": "Cold, sharp, and creamy. Served on the side so each person decides how much heat they want next to a sweet glazed steak.",
+  "tags": ["no-cook", "make-ahead", "sauce"],
+  "pairs_with": ["teriyaki-flank-steak", "flank-steak"],
+  "ingredients": [
+    {"id": "crema", "qty": 0.75, "unit": "cup", "item": "Mexican crema or sour cream"},
+    {"id": "mayo", "qty": 0.25, "unit": "cup", "item": "mayonnaise"},
+    {"id": "wasabi", "qty": 2, "qty_max": 3, "unit": "tsp", "item": "wasabi paste", "note": "start at 2; it builds as it sits"},
+    {"id": "rice-vinegar", "qty": 2, "unit": "tsp", "item": "rice vinegar"},
+    {"id": "soy", "qty": 1, "unit": "tsp", "item": "soy sauce"},
+    {"id": "shallot", "qty": 1, "unit": "tbsp", "item": "shallot", "prep": "minced", "optional": true},
+    {"id": "scallion", "qty": 1, "item": "scallion", "prep": "thinly sliced", "optional": true}
+  ],
+  "steps": [
+    {"title": "Mix", "text": "Whisk the crema, mayonnaise, rice vinegar and soy sauce until smooth. Fold in the shallot if using.", "uses": ["crema", "mayo", "rice-vinegar", "soy", "shallot"]},
+    {"title": "Wasabi last", "text": "Whisk in the wasabi right before serving. Heat fades fast once it's in the dairy and faster if it sits warm, so add it last and keep the bowl cold.", "uses": ["wasabi"]},
+    {"title": "Serve", "text": "Scallion on top. Serve in a bowl on the side, not spooned over the plate.", "uses": ["scallion"]}
+  ],
+  "notes": "Reconstructed from the cooking skill. The one rule that came from the conversation: wasabi goes in at the end because heat kills it."
+}

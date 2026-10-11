@@ -1,0 +1,31 @@
+{
+  "id": "miso-brown-butter-mash",
+  "title": "Miso Brown Butter Mashed Potatoes",
+  "role": "starch",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "any",
+  "status": "draft",
+  "serves": 5,
+  "time": {"active_min": 20, "total_min": 40},
+  "summary": "The usual mash with brown butter and white miso whisked in. Salty, nutty, and a bridge to anything teriyaki or soy-glazed.",
+  "tags": ["stovetop", "potatoes"],
+  "pairs_with": ["teriyaki-flank-steak", "flank-steak"],
+  "ingredients": [
+    {"id": "potatoes", "qty": 3, "unit": "lb", "item": "Yukon Gold potatoes", "prep": "peeled, cut in 2-inch chunks"},
+    {"id": "salt-water", "qty": 1, "unit": "tbsp", "item": "kosher salt", "note": "for the cooking water"},
+    {"id": "butter", "qty": 6, "unit": "tbsp", "item": "unsalted butter"},
+    {"id": "miso", "qty": 3, "unit": "tbsp", "item": "white miso"},
+    {"id": "cream", "qty": 0.75, "unit": "cup", "item": "heavy cream or whole milk", "prep": "warmed"},
+    {"id": "pepper", "qty": null, "item": "black pepper", "note": "to taste"},
+    {"id": "scallions", "qty": 2, "item": "scallions", "prep": "thinly sliced", "optional": true}
+  ],
+  "steps": [
+    {"title": "Boil", "text": "Cover the potatoes with cold water by an inch, add the salt, and bring to a boil. Simmer until a knife slides in with no resistance, 15 to 18 minutes.", "uses": ["potatoes", "salt-water"], "timer_min": 15},
+    {"title": "Brown the butter", "text": "While they cook, melt the butter in a small light-colored pan over medium. Swirl until the foam subsides and the solids turn the color of a hazelnut and smell toasty, 4 to 6 minutes. Pull it the moment it's there; it goes from brown to burnt in thirty seconds.", "uses": ["butter"], "timer_min": 5},
+    {"title": "Miso into butter", "text": "Off the heat, whisk the miso into the brown butter until smooth. Doing it here instead of in the potatoes means no miso lumps.", "uses": ["miso"]},
+    {"title": "Mash", "text": "Drain the potatoes and let them steam dry in the pot for a minute. Mash, then fold in the miso butter and the warm cream. Hold back on added salt: the miso brings plenty. Taste, then pepper.", "uses": ["potatoes", "cream", "pepper"]},
+    {"title": "Finish", "text": "Scallions over the top if using.", "uses": ["scallions"]}
+  ],
+  "notes": "Philip's numbers: 3 Tbsp white miso and 6 Tbsp butter for 3 lb potatoes. The cream quantity and method are reconstructed."
+}
