@@ -124,10 +124,10 @@ class CompileData(unittest.TestCase):
         self.assertEqual(by_id["test-broccoli"]["pairs_with"], ["test-chicken"])
         self.assertEqual(warnings, [])
 
-    def test_unknown_pairing_is_a_warning(self):
-        data, warnings = compile_data([("test-chicken.json", good_recipe(pairs_with=["nope"]))], [])
-        self.assertEqual(data["recipes"][0]["pairs_with"], [])
-        self.assertTrue(any("'nope' does not exist yet" in w for w in warnings))
+    def test_unknown_pairing_fails_the_build(self):
+        with self.assertRaises(BuildError) as cm:
+            compile_data([("test-chicken.json", good_recipe(pairs_with=["nope"]))], [])
+        self.assertIn("pairs_with 'nope' is not a recipe", str(cm.exception))
 
     def test_filename_must_match_id(self):
         with self.assertRaises(BuildError) as cm:

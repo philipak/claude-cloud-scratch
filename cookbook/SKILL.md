@@ -25,8 +25,10 @@ something he has not cooked yet, save it with `"status": "draft"`.
    If that id already exists and this is a revision, overwrite it. If it is a
    different recipe with a similar name, make the id more specific.
 3. Decide `pairs_with` from the conversation: what Philip said he served it
-   with, or what he asked for it to go with. Use existing ids. It is fine to
-   list an id that does not exist yet (the build only warns), but say so.
+   with, or what he asked for it to go with. Only ids that already exist in
+   `cookbook/recipes/`. A pairing to a missing recipe fails the build and
+   blocks the site, so drop it, tell Philip, and add the link from the other
+   recipe's file when that one is saved (pairings are symmetric).
 
 ## The format
 
@@ -67,6 +69,8 @@ Rules that the build enforces (a violation blocks the whole site):
 - `qty` is a number or `null`. Never `"2"`, never `"a pinch"`. Put words in
   `note`. Use decimals for fractions: `0.5`, `0.25`, `0.333`.
 - Every `uses` entry is an ingredient `id` in the same recipe.
+- Every `pairs_with` entry and every meal `recipes` entry is an existing id.
+- Every ingredient appears in at least one step's `uses`.
 - The filename is `<id>.json` and `id` inside matches it.
 
 Rules that matter for cooking:

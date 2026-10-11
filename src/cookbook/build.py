@@ -72,16 +72,19 @@ def compile_data(recipes, meals):
     if problems:
         raise BuildError("\n".join(problems))
 
-    # Pairings are symmetric: if A lists B, B shows A. Unknown slugs are
-    # warnings, not errors, so a recipe can be added before its side exists.
+    # Pairings are symmetric: if A lists B, B shows A. A pairing must point
+    # at a recipe that exists, because the deploy runs this same check and a
+    # broken link would otherwise block the whole site.
     pairs = {rid: set() for rid in by_id}
     for rid, recipe in by_id.items():
         for other in recipe.get("pairs_with", []):
             if other not in by_id:
-                warnings.append(f"{rid}: pairs_with '{other}' does not exist yet")
+                problems.append(f"{rid}.json: pairs_with '{other}' is not a recipe in this cookbook")
                 continue
             pairs[rid].add(other)
             pairs[other].add(rid)
+    if problems:
+        raise BuildError("\n".join(problems))
 
     out_recipes = []
     for rid in sorted(by_id):

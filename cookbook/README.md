@@ -72,10 +72,12 @@ Required: `id`, `title`, `role`, `effort`, `protein`, `genre`, `serves`,
 | `ingredients[].prep`, `note`, `group`, `optional` | optional. `group` labels a sub-list ("Marinade", "To finish"). |
 | `steps[].uses` | ingredient ids this step needs. **This is what the cook card prints on the step**, so be complete. Empty list is fine. |
 | `steps[].timer_min` | optional; the cook card shows a timer button. |
-| `pairs_with` | recipe ids that go with this one. Symmetric at build time: list it on either side. Unknown ids are a warning, not an error, so you can add a main before its side exists. |
+| `pairs_with` | recipe ids that go with this one. Symmetric at build time: list it on either side. Every id must already exist; add the side first, or add the pairing from the side's file when it arrives. |
 
-Every ingredient should be used by at least one step; the build warns if not,
-and the checked-in tests treat warnings on repo files as failures.
+Every ingredient should be used by at least one step. The build reports an
+unused ingredient as a warning, and the checked-in tests (which the deploy
+workflow runs) treat any warning on a repo file as a failure. In practice:
+a file that produces a warning will not deploy.
 
 ## Meal format
 
