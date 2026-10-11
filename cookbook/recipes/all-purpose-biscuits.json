@@ -1,0 +1,35 @@
+{
+  "id": "all-purpose-biscuits",
+  "title": "All-Purpose Biscuits",
+  "role": "starch",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "american",
+  "status": "draft",
+  "serves": 6,
+  "time": {"active_min": 15, "total_min": 60},
+  "summary": "Tall, flaky biscuits from a food processor, folded three times and rested before cutting.",
+  "tags": ["baking", "bread", "food-processor"],
+  "pairs_with": ["nashville-hot-fried-chicken"],
+  "source": {"name": "NYT Cooking (Sam Sifton)", "url": "https://cooking.nytimes.com/search?q=All-Purpose+Biscuits+Sam+Sifton"},
+  "ingredients": [
+    {"id": "flour", "qty": 2, "unit": "cup", "item": "all-purpose flour"},
+    {"id": "baking-powder", "qty": 2, "unit": "tbsp", "item": "baking powder"},
+    {"id": "sugar", "qty": 1, "unit": "tbsp", "item": "sugar", "note": "scant"},
+    {"id": "salt", "qty": 1, "unit": "tsp", "item": "salt"},
+    {"id": "butter", "qty": 5, "unit": "tbsp", "item": "cold unsalted butter", "prep": "cut into pats", "note": "European style preferred"},
+    {"id": "milk", "qty": 1, "unit": "cup", "item": "whole milk"},
+    {"id": "dusting-flour", "qty": null, "item": "all-purpose flour", "note": "for dusting"}
+  ],
+  "steps": [
+    {"title": "Heat the oven", "text": "Preheat the oven to 425°F.", "uses": []},
+    {"title": "Dry ingredients", "text": "Sift the flour, baking powder, sugar, and salt into a large bowl, then move it to a food processor.", "uses": ["flour", "baking-powder", "sugar", "salt"]},
+    {"title": "Cut in the butter", "text": "Add the butter and pulse 5 or 6 times, just until it looks like rough crumbs. A fork or pastry cutter in the bowl works too.", "uses": ["butter"]},
+    {"title": "Add the milk", "text": "Return it to the bowl, add the milk, and stir with a fork until it comes together in a rough ball.", "uses": ["milk"]},
+    {"title": "Fold three times", "text": "On a well-floured counter, pat the dough into a rough rectangle about an inch thick. Fold it over and pat it down again. Do this three times total. The folds make the flaky layers.", "uses": ["dusting-flour"]},
+    {"title": "Rest", "text": "Cover loosely with a towel and let it rest.", "uses": [], "timer_min": 30},
+    {"title": "Cut", "text": "Pat it out to about 10 by 6 inches and cut with a floured cutter. Press straight down without twisting; twisting seals the edges and the biscuits won't rise as tall.", "uses": ["dusting-flour"]},
+    {"title": "Bake", "text": "Bake on a sheet pan until golden brown.", "uses": [], "timer_min": 12}
+  ],
+  "notes": "Makes 6 to 8. Double it for the family; it takes no extra time. Also good with sausage gravy, ham, or honey."
+}
