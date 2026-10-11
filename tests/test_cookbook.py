@@ -101,6 +101,46 @@ class ValidateRecipe(unittest.TestCase):
             validate_recipe(good_recipe(status="maybe"))
 
 
+class ImpersonalVoice(unittest.TestCase):
+    """The site is public: prose must not name or refer to a person."""
+
+    def test_pronouns_and_possessive_names_are_rejected(self):
+        bad = [
+            {"notes": "As he makes it, the spices go in last."},
+            {"notes": "Philip's recipe, scaled up."},
+            {"summary": "My go-to for a Tuesday."},
+            {"notes": "I like it hotter."},
+        ]
+        for over in bad:
+            with self.assertRaises(ValidationError, msg=over) as cm:
+                validate_recipe(good_recipe(**over))
+            self.assertIn("reads personal", cm.exception.problems[0])
+
+    def test_step_text_and_ingredient_notes_are_checked(self):
+        recipe = good_recipe()
+        recipe["steps"][0]["text"] = "Season it the way she likes."
+        with self.assertRaises(ValidationError):
+            validate_recipe(recipe)
+        recipe = good_recipe()
+        recipe["ingredients"][0]["note"] = "his favourite brand"
+        with self.assertRaises(ValidationError):
+            validate_recipe(recipe)
+
+    def test_ordinary_cooking_prose_passes(self):
+        ok = [
+            {"notes": "House marinade, same for steak or chicken. Serves a real family batch."},
+            {"summary": "Rest it; the board gets the juice otherwise."},
+            {"notes": "Use US cups. Thighs forgive the heat."},
+            {"notes": "Hershey's cocoa works; so does Dutch process."},
+        ]
+        for over in ok:
+            self.assertEqual(validate_recipe(good_recipe(**over)), [], over)
+
+    def test_meal_notes_are_checked(self):
+        with self.assertRaises(ValidationError):
+            validate_meal(good_meal(notes="The meal he made last week."))
+
+
 class ValidateMeal(unittest.TestCase):
     def test_good_meal(self):
         self.assertEqual(validate_meal(good_meal()), [])

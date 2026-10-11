@@ -240,7 +240,7 @@
     setNav('meals');
     app.innerHTML = h`
       <div class="hero"><h1>Meals</h1><p class="muted">Saved combinations. Open one for a merged shopping list and the cook order.</p></div>
-      ${DATA.meals.length ? '<div class="grid">' + DATA.meals.map(mealCard).join('') + '</div>' : '<div class="empty">No saved meals yet. Ask the cooking chat to save one.</div>'}
+      ${DATA.meals.length ? '<div class="grid">' + DATA.meals.map(mealCard).join('') + '</div>' : '<div class="empty">No saved meals yet.</div>'}
     `;
   }
 

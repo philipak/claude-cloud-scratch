@@ -18,6 +18,43 @@ ROLES = ("main", "side", "starch", "salad", "sauce", "soup", "dessert", "drink",
 EFFORTS = ("weeknight", "weekend")
 STATUSES = ("tested", "draft")
 
+# The site is public. Prose fields are written in the impersonal voice: no
+# personal pronouns, and nothing that names a person. A note like "X's recipe"
+# or "as he makes it" reads as a dossier on whoever owns the cookbook.
+PERSONAL_RE = re.compile(
+    r"\b(?:he|him|his|she|her|hers|me|my|mine|we|us|our|ours|myself|himself|herself)\b"
+    r"|\bI(?:'m|'ve|'d|'ll)?\b"
+    r"|\b[A-Z][a-z]+'s (?:recipe|version|numbers?|marinade|method|notes?|take|way|usual|own|go-to)\b",
+    re.IGNORECASE,
+)
+PERSONAL_RE_CASE = re.compile(r"\bI(?:'m|'ve|'d|'ll)?\b")  # "I" only when capitalised
+
+PROSE_FIELDS = ("title", "summary", "notes")
+
+
+def find_personal(text):
+    """Return the first personal word in a prose string, or None."""
+    if not isinstance(text, str):
+        return None
+    for m in PERSONAL_RE.finditer(text):
+        word = m.group(0)
+        if word.lower() in ("i", "i'm", "i've", "i'd", "i'll") and not PERSONAL_RE_CASE.search(word):
+            continue
+        if word == "US":  # "US cups", not the pronoun
+            continue
+        return word
+    return None
+
+
+def _check_prose(obj, fields, where, problems):
+    for key in fields:
+        hit = find_personal(obj.get(key))
+        if hit:
+            problems.append(
+                f"{where}'{key}' reads personal ({hit!r}); the site is public, so write it without names or pronouns"
+            )
+
+
 REQUIRED_RECIPE = ("id", "title", "role", "effort", "protein", "genre", "serves", "ingredients", "steps")
 REQUIRED_MEAL = ("id", "title", "recipes")
 
@@ -72,6 +109,7 @@ def _check_ingredient(ing, index, problems, seen_ids):
     for opt in ("unit", "prep", "note", "group"):
         if opt in ing and (not isinstance(ing[opt], str)):
             problems.append(f"{where}.{opt} must be a string")
+    _check_prose(ing, ("note",), where + ".", problems)
     if "optional" in ing and not isinstance(ing["optional"], bool):
         problems.append(f"{where}.optional must be true or false")
 
@@ -84,6 +122,7 @@ def _check_step(step, index, problems, ingredient_ids, used_ids):
     _check_str(step, "text", problems)
     if "title" in step and not isinstance(step["title"], str):
         problems.append(f"{where}.title must be a string")
+    _check_prose(step, ("title", "text"), where + ".", problems)
     uses = step.get("uses", [])
     if not isinstance(uses, list):
         problems.append(f"{where}.uses must be a list of ingredient ids")
@@ -128,6 +167,7 @@ def validate_recipe(recipe):
     for opt in ("summary", "notes"):
         if opt in recipe and not isinstance(recipe[opt], str):
             problems.append(f"'{opt}' must be a string")
+    _check_prose(recipe, PROSE_FIELDS, "", problems)
 
     time = recipe.get("time")
     if time is not None:
@@ -203,6 +243,7 @@ def validate_meal(meal):
         problems.append("'recipes' must not repeat a recipe")
     if "notes" in meal and not isinstance(meal["notes"], str):
         problems.append("'notes' must be a string")
+    _check_prose(meal, ("title", "notes"), "", problems)
     if "effort" in meal and meal["effort"] not in EFFORTS:
         problems.append(f"'effort' must be one of {', '.join(EFFORTS)}")
     if problems:
