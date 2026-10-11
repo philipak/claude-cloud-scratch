@@ -74,6 +74,12 @@ Required: `id`, `title`, `role`, `effort`, `protein`, `genre`, `serves`,
 | `steps[].timer_min` | optional; the cook card shows a timer button. |
 | `pairs_with` | recipe ids that go with this one. Symmetric at build time: list it on either side. Every id must already exist; add the side first, or add the pairing from the side's file when it arrives. |
 
+All prose (title, summary, notes, step title and text, ingredient notes,
+meal title and notes) must be impersonal: no names, no personal pronouns.
+The site is public. The build rejects a possessive name before "recipe" or
+"marinade" and any third-person description of the cook alike, and quotes
+the word it tripped on.
+
 Every ingredient should be used by at least one step. The build reports an
 unused ingredient as a warning, and the checked-in tests (which the deploy
 workflow runs) treat any warning on a repo file as a failure. In practice:

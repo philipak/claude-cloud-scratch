@@ -107,7 +107,7 @@ class ImpersonalVoice(unittest.TestCase):
     def test_pronouns_and_possessive_names_are_rejected(self):
         bad = [
             {"notes": "As he makes it, the spices go in last."},
-            {"notes": "Philip's recipe, scaled up."},
+            {"notes": "Marco's recipe, scaled up."},
             {"summary": "My go-to for a Tuesday."},
             {"notes": "I like it hotter."},
         ]

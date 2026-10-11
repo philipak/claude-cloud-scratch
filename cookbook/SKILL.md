@@ -1,20 +1,20 @@
 ---
 name: cookbook
-description: Save a recipe or meal that worked into Philip's cookbook site (the claude-cloud-scratch repo). Use when Philip says a recipe worked, asks to save it, asks to add it to the cookbook, or wants a meal saved. Also use when he asks what is already in the cookbook or what goes with a recipe.
+description: Save a recipe or meal that worked into the owner's cookbook site (the claude-cloud-scratch repo). Use when the owner says a recipe worked, asks to save it, asks to add it to the cookbook, or wants a meal saved. Also use when they ask what is already in the cookbook or what goes with a recipe.
 ---
 
 # Cookbook
 
-Philip's recipes live as one JSON file each in the GitHub repo
+The owner's recipes live as one JSON file each in the GitHub repo
 `philipak/claude-cloud-scratch`, under `cookbook/recipes/`. Saved meals live in
 `cookbook/meals/`. A push to `main` rebuilds the site. The site is read-only;
 this skill is the only way recipes get in.
 
 ## When to save
 
-Only when Philip says the recipe worked, or explicitly asks to save it.
-A recipe still being developed stays in the chat. If he wants to save
-something he has not cooked yet, save it with `"status": "draft"`.
+Only when the owner says the recipe worked, or explicitly asks to save it.
+A recipe still being developed stays in the chat. To save something not yet
+cooked, save it with `"status": "draft"`.
 
 ## Before writing
 
@@ -24,10 +24,10 @@ something he has not cooked yet, save it with `"status": "draft"`.
 2. Pick the id: lowercase slug of the title, e.g. `oven-roasted-chili-broccoli`.
    If that id already exists and this is a revision, overwrite it. If it is a
    different recipe with a similar name, make the id more specific.
-3. Decide `pairs_with` from the conversation: what Philip said he served it
-   with, or what he asked for it to go with. Only ids that already exist in
+3. Decide `pairs_with` from the conversation: what the owner said they served it
+   with, or what they asked for it to go with. Only ids that already exist in
    `cookbook/recipes/`. A pairing to a missing recipe fails the build and
-   blocks the site, so drop it, tell Philip, and add the link from the other
+   blocks the site, so drop it, say so, and add the link from the other
    recipe's file when that one is saved (pairings are symmetric).
 
 ## The format
@@ -58,7 +58,7 @@ Required: `id`, `title`, `role`, `effort`, `protein`, `genre`, `serves`,
     {"title": "Toss", "text": "Toss the broccoli with the chili flakes.", "uses": ["broccoli", "chili-flakes"]},
     {"title": "Roast", "text": "Roast 15 minutes.", "uses": ["broccoli"], "timer_min": 15}
   ],
-  "notes": "Anything Philip said about what to change next time."
+  "notes": "What to change next time, in the impersonal voice."
 }
 ```
 
@@ -75,14 +75,20 @@ Rules that the build enforces (a violation blocks the whole site):
 
 Rules that matter for cooking:
 
+- **Impersonal voice, always.** The site and the repo are public. No names
+  and no personal pronouns in any title, summary, note, step or ingredient
+  note. Write "House marinade", not a possessive with a name, and "spices go
+  in last", not a description of how a particular person does it. The build
+  rejects a file that breaks this and quotes the word it tripped on.
+
 - **`uses` is the whole point.** The cook card shows one step at a time and
-  prints that step's ingredients with amounts on the card, so Philip never has
+  prints that step's ingredients with amounts on the card, so the cook never has
   to scroll back to the list. Every ingredient a step touches goes in its
   `uses`. Every ingredient must appear in at least one step.
 - One action per step. Short title, then the text. Put the "why" in the text
   when it changes what you do ("don't lift the lid").
 - `timer_min` on any step with a wait: marinate, roast, rest, soak.
-- `effort` is Philip's judgment, not total minutes. A 90-minute recipe with
+- `effort` is the owner's judgment, not total minutes. A 90-minute recipe with
   15 active minutes is a weeknight recipe.
 - Sources: keep `source.name` and `source.url` for anything adapted from NYT
   Cooking or elsewhere, and write the step text in your own words. Ingredient
@@ -90,7 +96,7 @@ Rules that matter for cooking:
 
 ## Meals
 
-When Philip says a combination is a meal he wants to keep, write
+When the owner says a combination is a meal they want to keep, write
 `cookbook/meals/<id>.json`:
 
 ```json
@@ -110,7 +116,7 @@ Every id in `recipes` must already exist in `cookbook/recipes/`.
 **If this chat has the GitHub connector:** create or update the file at
 `cookbook/recipes/<id>.json` (or `cookbook/meals/<id>.json`) on branch
 `main` of `philipak/claude-cloud-scratch`, commit message
-`Add recipe: <Title>` or `Update recipe: <Title>`. Then tell Philip the site
+`Add recipe: <Title>` or `Update recipe: <Title>`. Then say the site
 rebuilds in about a minute. If the Actions run fails, the validation message
 names the field; fix and commit again.
 
@@ -121,10 +127,10 @@ code block, headed by the filename, and say:
 > "add this to the cookbook". That session will validate it, commit it, and
 > the site rebuilds once it lands on `main`.
 
-Never output a partial file for Philip to merge by hand.
+Never output a partial file for the owner to merge by hand.
 
 ## Answering questions
 
 "What goes with X" and "what do I have for a weeknight chicken" are answered by
 reading `cookbook/recipes/` from the repo, not from memory. If the chat cannot
-reach GitHub, say so and point him at the site.
+reach GitHub, say so and point them at the site.
