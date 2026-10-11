@@ -1,0 +1,128 @@
+{
+  "id": "black-bean-rice",
+  "title": "Black Bean Rice",
+  "role": "starch",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 15,
+    "total_min": 40
+  },
+  "summary": "Rice toasted with onion and garlic until it chars a little, cooked in chicken stock, finished with black beans, cilantro, cumin, and curry.",
+  "tags": [
+    "one-pot"
+  ],
+  "pairs_with": [
+    "steak-fajitas",
+    "chicken-fajitas"
+  ],
+  "ingredients": [
+    {
+      "id": "oil",
+      "qty": 2,
+      "unit": "tbsp",
+      "item": "neutral oil"
+    },
+    {
+      "id": "onion",
+      "qty": 0.5,
+      "item": "onion",
+      "prep": "chopped"
+    },
+    {
+      "id": "garlic",
+      "qty": 3,
+      "unit": "cloves",
+      "item": "garlic",
+      "prep": "minced"
+    },
+    {
+      "id": "rice",
+      "qty": 3,
+      "unit": "cup",
+      "item": "long-grain white rice"
+    },
+    {
+      "id": "stock",
+      "qty": 6,
+      "unit": "cup",
+      "item": "chicken stock",
+      "note": "your usual water-to-rice ratio"
+    },
+    {
+      "id": "beans",
+      "qty": 1,
+      "unit": "15-oz can",
+      "item": "black beans",
+      "prep": "drained"
+    },
+    {
+      "id": "cilantro",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "cilantro",
+      "prep": "chopped"
+    },
+    {
+      "id": "curry",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "curry powder"
+    },
+    {
+      "id": "cumin",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "ground cumin"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "salt",
+      "note": "to taste"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Aromatics",
+      "text": "Sauté the onion and garlic in the oil until soft.",
+      "uses": [
+        "oil",
+        "onion",
+        "garlic"
+      ],
+      "timer_min": 4
+    },
+    {
+      "title": "Toast the rice",
+      "text": "Add the rice and stir until some grains pick up a bit of char.",
+      "uses": [
+        "rice"
+      ],
+      "timer_min": 4
+    },
+    {
+      "title": "Cook",
+      "text": "Add the stock, bring to a boil, cover, and cook on low until the rice is tender.",
+      "uses": [
+        "stock"
+      ],
+      "timer_min": 18
+    },
+    {
+      "title": "Finish",
+      "text": "Fold in the drained beans, cilantro, curry powder, and cumin. Taste for salt.",
+      "uses": [
+        "beans",
+        "cilantro",
+        "curry",
+        "cumin",
+        "salt"
+      ]
+    }
+  ],
+  "notes": "Philip's recipe. Rice, stock, and spice amounts are set for 10 servings; adjust to taste. Spices go in at the end with the beans, as he makes it."
+}

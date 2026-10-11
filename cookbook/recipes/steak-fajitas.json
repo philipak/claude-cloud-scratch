@@ -1,0 +1,180 @@
+{
+  "id": "steak-fajitas",
+  "title": "Steak Fajitas",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "beef",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 35,
+    "total_min": 230
+  },
+  "summary": "Flank steak in a chili, lime, and hot honey marinade, seared in cast iron on the grill with peppers and onions.",
+  "tags": [
+    "grill",
+    "cast-iron",
+    "marinade",
+    "tacos"
+  ],
+  "pairs_with": [
+    "black-bean-rice",
+    "chicken-fajitas"
+  ],
+  "ingredients": [
+    {
+      "id": "meat",
+      "qty": 4,
+      "unit": "lb",
+      "item": "flank steak"
+    },
+    {
+      "id": "chili-powder",
+      "qty": 3,
+      "unit": "tbsp",
+      "item": "chili powder",
+      "group": "Marinade"
+    },
+    {
+      "id": "cumin",
+      "qty": 1.5,
+      "unit": "tbsp",
+      "item": "ground cumin",
+      "group": "Marinade"
+    },
+    {
+      "id": "garlic-powder",
+      "qty": 1.5,
+      "unit": "tbsp",
+      "item": "garlic powder",
+      "group": "Marinade"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "prep": "juiced",
+      "group": "Marinade"
+    },
+    {
+      "id": "oil",
+      "qty": 0.25,
+      "unit": "cup",
+      "item": "neutral oil",
+      "note": "enough to make it spreadable",
+      "group": "Marinade"
+    },
+    {
+      "id": "vinegar",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "apple cider vinegar",
+      "group": "Marinade"
+    },
+    {
+      "id": "hot-honey",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "hot honey",
+      "group": "Marinade"
+    },
+    {
+      "id": "peppers",
+      "qty": 4,
+      "item": "bell peppers",
+      "prep": "sliced into strips",
+      "note": "estimate",
+      "group": "Vegetables"
+    },
+    {
+      "id": "onions",
+      "qty": 2,
+      "item": "onions",
+      "prep": "sliced",
+      "note": "estimate",
+      "group": "Vegetables"
+    },
+    {
+      "id": "veg-oil",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "neutral oil",
+      "qty_max": 2,
+      "group": "Vegetables"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "kosher salt",
+      "note": "to taste"
+    },
+    {
+      "id": "tortillas",
+      "qty": null,
+      "item": "flour or corn tortillas",
+      "group": "To serve"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix the marinade",
+      "text": "Stir the chili powder, cumin, garlic powder, lime juice, vinegar, and hot honey, then add oil until it's spreadable.",
+      "uses": [
+        "chili-powder",
+        "cumin",
+        "garlic-powder",
+        "lime",
+        "oil",
+        "vinegar",
+        "hot-honey"
+      ]
+    },
+    {
+      "title": "Marinate",
+      "text": "Coat the meat all over and refrigerate at least 3 hours.",
+      "uses": [
+        "meat"
+      ],
+      "timer_min": 180
+    },
+    {
+      "title": "Heat the cast iron",
+      "text": "Set a cast-iron pan on the grill over high heat and let it get very hot.",
+      "uses": []
+    },
+    {
+      "title": "Cook the meat",
+      "text": "Sear the steak in batches if needed, about 4 to 5 minutes a side, to 130°F for medium-rare.",
+      "uses": [
+        "meat"
+      ],
+      "timer_min": 9
+    },
+    {
+      "title": "Rest",
+      "text": "Rest the meat while the vegetables cook, then slice thin against the grain.",
+      "uses": [],
+      "timer_min": 10
+    },
+    {
+      "title": "Peppers and onions",
+      "text": "Add the oil to the hot pan and cook the peppers and onions, tossing, until charred at the edges but still a little crisp. Season with salt.",
+      "uses": [
+        "peppers",
+        "onions",
+        "veg-oil",
+        "salt"
+      ],
+      "timer_min": 8
+    },
+    {
+      "title": "Serve",
+      "text": "Pile the meat and vegetables together and serve with warm tortillas.",
+      "uses": [
+        "tortillas"
+      ]
+    }
+  ],
+  "notes": "Philip's marinade, same for steak or chicken. 'Parts' set at 1 part = 1 1/2 tbsp. Pepper and onion counts are estimates; he didn't give them."
+}

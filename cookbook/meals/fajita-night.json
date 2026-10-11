@@ -1,0 +1,10 @@
+{
+  "id": "fajita-night",
+  "title": "Fajita Night",
+  "effort": "weeknight",
+  "recipes": [
+    "steak-fajitas",
+    "black-bean-rice"
+  ],
+  "notes": "Marinate at least 3 hours ahead. Swap in chicken fajitas for the steak; everything else stays the same. Start the rice before the meat goes on the grill."
+}
