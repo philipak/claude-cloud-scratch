@@ -1,7 +1,7 @@
 {
   "id": "black-bean-rice",
   "title": "Black Bean Rice",
-  "role": "starch",
+  "role": "component",
   "effort": "weeknight",
   "protein": "none",
   "genre": "mexican",
@@ -11,7 +11,7 @@
     "active_min": 15,
     "total_min": 40
   },
-  "summary": "Rice toasted with onion and garlic until it chars a little, cooked in chicken stock, finished with black beans, cilantro, cumin, and curry.",
+  "summary": "Rice toasted with onion and garlic until it chars a little, cooked in chicken stock, finished with black beans, cilantro, cumin, and curry. Filler for fajita tacos.",
   "tags": [
     "one-pot"
   ],
@@ -22,7 +22,7 @@
   "ingredients": [
     {
       "id": "oil",
-      "qty": 2,
+      "qty": 1,
       "unit": "tbsp",
       "item": "neutral oil"
     },
@@ -41,13 +41,13 @@
     },
     {
       "id": "rice",
-      "qty": 3,
+      "qty": 1,
       "unit": "cup",
       "item": "long-grain white rice"
     },
     {
       "id": "stock",
-      "qty": 6,
+      "qty": 2,
       "unit": "cup",
       "item": "chicken stock",
       "note": "your usual water-to-rice ratio"
@@ -61,20 +61,20 @@
     },
     {
       "id": "cilantro",
-      "qty": 0.5,
+      "qty": 0.25,
       "unit": "cup",
       "item": "cilantro",
       "prep": "chopped"
     },
     {
       "id": "curry",
-      "qty": 1,
+      "qty": 0.5,
       "unit": "tsp",
       "item": "curry powder"
     },
     {
       "id": "cumin",
-      "qty": 1,
+      "qty": 0.5,
       "unit": "tsp",
       "item": "ground cumin"
     },
@@ -124,5 +124,5 @@
       ]
     }
   ],
-  "notes": "Philip's recipe. Rice, stock, and spice amounts are set for 10 servings; adjust to taste. Spices go in at the end with the beans, as he makes it."
+  "notes": "Philip's recipe. One cup of rice is enough because it goes inside the fajita tacos as filler, not on the side. Spices go in at the end with the beans, as he makes it; curry and cumin amounts are estimates."
 }
