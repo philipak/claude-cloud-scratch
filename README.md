@@ -32,3 +32,15 @@ python3 -m unittest discover -s tests -v
 Implement `format_duration` in `src/durations/core.py` so the whole suite
 passes. It must be the exact inverse of `parse_duration`: largest units
 first, units contributing nothing omitted, and `0` rendering as `"0s"`.
+
+## The cookbook
+
+`cookbook/` is a personal recipe site built from JSON files and published
+with GitHub Pages. It is the one part of this repo that is not a throwaway.
+See `cookbook/README.md` for the format and `cookbook/SKILL.md` for how
+recipes get added from a chat.
+
+```
+PYTHONPATH=src python3 -m cookbook --out dist
+python3 -m http.server 8000 --directory dist
+```

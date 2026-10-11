@@ -1,0 +1,32 @@
+{
+  "id": "roasted-chili-broccoli",
+  "title": "Oven-Roasted Chili Pepper Broccoli",
+  "role": "side",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "any",
+  "status": "draft",
+  "serves": 4,
+  "time": {"active_min": 10, "total_min": 30},
+  "summary": "Crisp-edged broccoli with garlic, chili flakes and a squeeze of lemon. Goes with almost any protein.",
+  "tags": ["sheet-pan", "vegetable", "fast"],
+  "pairs_with": ["flank-steak"],
+  "ingredients": [
+    {"id": "broccoli", "qty": 1.5, "unit": "lb", "item": "broccoli", "prep": "cut into florets, stems peeled and sliced"},
+    {"id": "olive-oil", "qty": 3, "unit": "tbsp", "item": "olive oil"},
+    {"id": "salt", "qty": 1, "unit": "tsp", "item": "kosher salt"},
+    {"id": "pepper", "qty": 0.5, "unit": "tsp", "item": "black pepper"},
+    {"id": "chili-flakes", "qty": 1, "qty_max": 2, "unit": "tsp", "item": "red pepper flakes", "note": "gochugaru is milder and works well next to Korean food"},
+    {"id": "garlic", "qty": 3, "unit": "cloves", "item": "garlic", "prep": "thinly sliced"},
+    {"id": "lemon", "qty": 0.5, "item": "lemon"},
+    {"id": "parmesan", "qty": 2, "unit": "tbsp", "item": "grated parmesan", "optional": true}
+  ],
+  "steps": [
+    {"title": "Heat", "text": "Heat the oven to 425°F with a sheet pan inside. A hot pan is what gives you browned edges instead of steamed broccoli.", "uses": []},
+    {"title": "Toss", "text": "In a big bowl, toss the broccoli with the olive oil, salt, pepper and chili flakes until every floret is glossy.", "uses": ["broccoli", "olive-oil", "salt", "pepper", "chili-flakes"]},
+    {"title": "Roast", "text": "Spread on the hot pan in one layer, cut sides down. Roast 15 minutes without touching it.", "uses": ["broccoli"], "timer_min": 15},
+    {"title": "Add garlic", "text": "Scatter the garlic over the top, toss once, and roast until the edges are deeply browned and the garlic is golden, 5 to 8 minutes more.", "uses": ["garlic"], "timer_min": 6},
+    {"title": "Finish", "text": "Squeeze the lemon over everything and toss with the parmesan if using. Taste for salt.", "uses": ["lemon", "parmesan"]}
+  ],
+  "notes": "Garlic goes in late so it doesn't burn. If the oven is already at a different temperature for a main, anything from 400 to 450°F works; adjust time by eye."
+}

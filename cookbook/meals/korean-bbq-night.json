@@ -1,0 +1,7 @@
+{
+  "id": "korean-bbq-night",
+  "title": "Korean BBQ Night",
+  "effort": "weeknight",
+  "recipes": ["korean-bbq-chicken", "roasted-chili-broccoli", "steamed-short-grain-rice"],
+  "notes": "Start the rice soaking first, marinate the chicken while it soaks, then roast the broccoli while the chicken is under the broiler. Everything lands within ten minutes."
+}

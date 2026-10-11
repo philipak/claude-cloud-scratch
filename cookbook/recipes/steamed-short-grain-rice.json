@@ -1,0 +1,26 @@
+{
+  "id": "steamed-short-grain-rice",
+  "title": "Steamed Short-Grain Rice",
+  "role": "starch",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "korean",
+  "status": "draft",
+  "serves": 4,
+  "time": {"active_min": 5, "total_min": 50},
+  "summary": "Stovetop method for sticky, separate-grained rice. Rinse, soak, steam, rest.",
+  "tags": ["stovetop", "staple"],
+  "pairs_with": [],
+  "ingredients": [
+    {"id": "rice", "qty": 2, "unit": "cups", "item": "short-grain white rice", "note": "sushi rice or Korean rice"},
+    {"id": "water", "qty": 2.25, "unit": "cups", "item": "water"}
+  ],
+  "steps": [
+    {"title": "Rinse", "text": "Put the rice in a bowl, cover with cold water, swirl with your hand and pour off the cloudy water. Repeat until the water runs nearly clear, 4 or 5 changes.", "uses": ["rice"]},
+    {"title": "Soak", "text": "Drain well. Combine the rice and measured water in a heavy pot with a tight lid and let it sit 20 minutes. Soaking is what gets the center cooked without the bottom scorching.", "uses": ["rice", "water"], "timer_min": 20},
+    {"title": "Boil", "text": "Bring to a boil over medium-high, uncovered, until you see big bubbles across the surface.", "uses": []},
+    {"title": "Steam", "text": "Cover, drop the heat to the lowest setting, and cook 15 minutes. Don't lift the lid.", "uses": [], "timer_min": 15},
+    {"title": "Rest", "text": "Off the heat, still covered, rest 10 minutes. Then fluff gently with a paddle from the bottom up.", "uses": [], "timer_min": 10}
+  ],
+  "notes": "Ratio is 1 cup rice to 1 1/8 cups water after soaking. If you have a rice cooker, use it; this is the no-cooker method."
+}

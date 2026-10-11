@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#1c1b19" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f1e8" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cookbook">
+<title>Cookbook</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🍳%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <a href="#/" class="brand">Cookbook</a>
+  <nav>
+    <a href="#/" data-nav="recipes">Recipes</a>
+    <a href="#/meals" data-nav="meals">Meals</a>
+    <a href="#/tonight" data-nav="tonight">Tonight <span id="tonight-count" class="count" hidden></span></a>
+  </nav>
+</header>
+<main id="app" aria-live="polite">
+  <p class="muted">Loading…</p>
+</main>
+<noscript><p class="muted">This cookbook needs JavaScript to search and scale recipes.</p></noscript>
+<script src="./app.js"></script>
+</body>
+</html>

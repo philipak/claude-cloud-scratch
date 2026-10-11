@@ -1,0 +1,38 @@
+{
+  "id": "korean-bbq-chicken",
+  "title": "Korean BBQ Chicken",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "chicken",
+  "genre": "korean",
+  "status": "draft",
+  "serves": 4,
+  "time": {"active_min": 20, "total_min": 50},
+  "summary": "Gochujang-marinated thighs, charred under the broiler or on the grill. Sweet, hot, sticky.",
+  "tags": ["grill", "broiler", "marinade", "make-ahead"],
+  "pairs_with": ["roasted-chili-broccoli", "steamed-short-grain-rice"],
+  "ingredients": [
+    {"id": "chicken", "qty": 2, "unit": "lb", "item": "boneless skinless chicken thighs", "prep": "trimmed"},
+    {"id": "gochujang", "qty": 3, "unit": "tbsp", "item": "gochujang", "group": "Marinade"},
+    {"id": "soy", "qty": 3, "unit": "tbsp", "item": "soy sauce", "group": "Marinade"},
+    {"id": "brown-sugar", "qty": 2, "unit": "tbsp", "item": "brown sugar", "group": "Marinade"},
+    {"id": "honey", "qty": 1, "unit": "tbsp", "item": "honey", "group": "Marinade"},
+    {"id": "sesame-oil", "qty": 1, "unit": "tbsp", "item": "toasted sesame oil", "group": "Marinade"},
+    {"id": "rice-vinegar", "qty": 1, "unit": "tbsp", "item": "rice vinegar", "group": "Marinade"},
+    {"id": "garlic", "qty": 4, "unit": "cloves", "item": "garlic", "prep": "grated", "group": "Marinade"},
+    {"id": "ginger", "qty": 1, "unit": "tbsp", "item": "fresh ginger", "prep": "grated", "group": "Marinade"},
+    {"id": "pear", "qty": 0.5, "item": "Asian pear", "prep": "grated", "optional": true, "note": "tenderizes and sweetens; skip if you don't have one", "group": "Marinade"},
+    {"id": "oil", "qty": 1, "unit": "tbsp", "item": "neutral oil"},
+    {"id": "scallions", "qty": 2, "item": "scallions", "prep": "thinly sliced", "group": "To finish"},
+    {"id": "sesame-seeds", "qty": 1, "unit": "tbsp", "item": "toasted sesame seeds", "group": "To finish"}
+  ],
+  "steps": [
+    {"title": "Marinade", "text": "Whisk the gochujang, soy sauce, brown sugar, honey, sesame oil, rice vinegar, garlic, ginger and pear (if using) in a large bowl until smooth.", "uses": ["gochujang", "soy", "brown-sugar", "honey", "sesame-oil", "rice-vinegar", "garlic", "ginger", "pear"]},
+    {"title": "Marinate", "text": "Add the chicken and turn to coat every piece. Cover and refrigerate at least 30 minutes, up to overnight. Pull it out 20 minutes before cooking.", "uses": ["chicken"], "timer_min": 30},
+    {"title": "Heat", "text": "Broiler: set a rack 6 inches from the element, line a sheet pan with foil, brush with the oil, and preheat on high for 5 minutes. Grill: medium-high, grates oiled.", "uses": ["oil"]},
+    {"title": "Cook side one", "text": "Lay the thighs out flat without crowding. Broil or grill until deeply browned with charred edges, 6 to 7 minutes. The sugar will blacken in spots; that's the point.", "uses": ["chicken"], "timer_min": 6},
+    {"title": "Cook side two", "text": "Flip and cook until the thickest piece reads 165°F and the glaze is sticky, 5 to 6 minutes more.", "uses": ["chicken"], "timer_min": 5},
+    {"title": "Rest and finish", "text": "Rest 5 minutes, then slice into strips. Scatter with scallions and sesame seeds and spoon any pan juices over the top.", "uses": ["scallions", "sesame-seeds"], "timer_min": 5}
+  ],
+  "notes": "Thighs forgive the high heat; breasts dry out before the glaze chars. Double the marinade and freeze half with raw chicken for a zero-effort weeknight."
+}

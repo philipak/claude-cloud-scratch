@@ -1,0 +1,34 @@
+{
+  "id": "flank-steak",
+  "title": "Marinated Flank Steak",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "beef",
+  "genre": "american",
+  "status": "draft",
+  "serves": 4,
+  "time": {"active_min": 15, "total_min": 90},
+  "summary": "Soy, lime and garlic marinade, hot and fast on the grill or under the broiler, sliced thin against the grain.",
+  "tags": ["grill", "broiler", "marinade"],
+  "pairs_with": ["steamed-short-grain-rice"],
+  "ingredients": [
+    {"id": "steak", "qty": 1.75, "unit": "lb", "item": "flank steak"},
+    {"id": "soy", "qty": 0.25, "unit": "cup", "item": "soy sauce", "group": "Marinade"},
+    {"id": "olive-oil", "qty": 2, "unit": "tbsp", "item": "olive oil", "group": "Marinade"},
+    {"id": "lime", "qty": 2, "unit": "tbsp", "item": "lime juice", "note": "about 1 lime", "group": "Marinade"},
+    {"id": "brown-sugar", "qty": 1, "unit": "tbsp", "item": "brown sugar", "group": "Marinade"},
+    {"id": "garlic", "qty": 3, "unit": "cloves", "item": "garlic", "prep": "grated", "group": "Marinade"},
+    {"id": "cumin", "qty": 1, "unit": "tsp", "item": "ground cumin", "group": "Marinade"},
+    {"id": "pepper", "qty": 0.5, "unit": "tsp", "item": "black pepper", "group": "Marinade"},
+    {"id": "flaky-salt", "qty": null, "item": "flaky salt", "note": "to finish"}
+  ],
+  "steps": [
+    {"title": "Marinade", "text": "Whisk the soy sauce, olive oil, lime juice, brown sugar, garlic, cumin and pepper in a zip bag or shallow dish.", "uses": ["soy", "olive-oil", "lime", "brown-sugar", "garlic", "cumin", "pepper"]},
+    {"title": "Marinate", "text": "Add the steak, press out the air, and refrigerate 1 to 8 hours. Longer than that and the lime starts to turn the surface mealy. Take it out 30 minutes before cooking.", "uses": ["steak"], "timer_min": 60},
+    {"title": "Heat", "text": "Grill on high, or broiler on high with a rack 4 to 5 inches from the element and a foil-lined pan preheating.", "uses": []},
+    {"title": "Sear", "text": "Pat the steak mostly dry and cook 4 to 5 minutes per side for medium-rare, 125 to 130°F in the thickest part. Flank is thin; it goes from perfect to grey fast.", "uses": ["steak"], "timer_min": 4},
+    {"title": "Rest", "text": "Move to a board and rest 10 minutes. Do not skip this or the board gets the juice instead of the plate.", "uses": [], "timer_min": 10},
+    {"title": "Slice", "text": "Find the grain (the long lines running down the steak) and slice thinly across it, knife at a slight angle. Finish with flaky salt.", "uses": ["flaky-salt"]}
+  ],
+  "notes": "Skirt steak works the same way with a minute less per side. Leftovers are good cold in a salad or tacos."
+}
