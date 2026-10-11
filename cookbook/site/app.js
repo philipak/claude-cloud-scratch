@@ -20,12 +20,25 @@
   }
   var state = {
     query: load('cb.query', ''),
-    filters: load('cb.filters', { effort: null, protein: null, genre: null, role: null }),
+    filters: load('cb.filters', {}),
     tonight: load('cb.tonight', []),
     scale: load('cb.scale', {}),      // recipeId -> servings
     checks: load('cb.checks', {}),    // key -> true
     cookStep: load('cb.cookStep', {}) // recipeId -> step index
   };
+  var EMPTY_FILTERS = { effort: null, protein: null, genre: null, role: null, tags: [] };
+  function normalizeFilters() {
+    var f = state.filters || {};
+    state.filters = {
+      effort: f.effort || null, protein: f.protein || null, genre: f.genre || null, role: f.role || null,
+      tags: Array.isArray(f.tags) ? f.tags.slice() : []
+    };
+  }
+  normalizeFilters();
+  function anyFilterActive() {
+    var f = state.filters;
+    return !!(state.query || f.effort || f.protein || f.genre || f.role || f.tags.length);
+  }
   function persist() {
     save('cb.query', state.query); save('cb.filters', state.filters); save('cb.tonight', state.tonight);
     save('cb.scale', state.scale); save('cb.checks', state.checks); save('cb.cookStep', state.cookStep);
@@ -140,56 +153,87 @@
       if (f.protein && r.protein !== f.protein) return false;
       if (f.genre && r.genre !== f.genre) return false;
       if (f.role && r.role !== f.role) return false;
+      for (var i = 0; i < f.tags.length; i++) if ((r.tags || []).indexOf(f.tags[i]) === -1) return false;
       return matches(r, state.query);
     });
   }
-  function chipRow(label, key, values) {
+  function chipOn(key, v) {
+    var cur = state.filters[key];
+    return Array.isArray(cur) ? cur.indexOf(v) !== -1 : cur === v;
+  }
+  function chipRow(label, key, values, opts) {
     if (!values.length) return '';
+    opts = opts || {};
     var chips = values.map(function (v) {
-      var on = state.filters[key] === v;
-      return h`<button class="chip${on ? ' on' : ''}" data-filter="${esc(key)}" data-value="${esc(v)}">${esc(cap(v))}</button>`;
+      return h`<button class="chip${chipOn(key, v) ? ' on' : ''}" data-filter="${esc(key)}" data-value="${esc(v)}" aria-pressed="${chipOn(key, v)}">${esc(cap(v))}</button>`;
     });
-    return h`<div class="chiprow"><span class="label">${esc(label)}</span>${chips.join('')}</div>`;
+    return h`<div class="chiprow${opts.hidden ? ' collapsed' : ''}" data-row="${esc(key)}"><span class="label">${esc(label)}</span><div class="chips">${chips.join('')}</div></div>`;
+  }
+  function toggleChip(key, v) {
+    var cur = state.filters[key];
+    if (Array.isArray(cur)) {
+      var i = cur.indexOf(v);
+      if (i === -1) cur.push(v); else cur.splice(i, 1);
+    } else {
+      state.filters[key] = cur === v ? null : v;
+    }
+    persist();
   }
 
   // ---------- views ----------
   function viewHome() {
     setNav('recipes');
-    var list = filtered();
-    var anyFilter = state.query || state.filters.effort || state.filters.protein || state.filters.genre || state.filters.role;
+    var showTags = load('cb.showTags', false) || state.filters.tags.length > 0;
     app.innerHTML = h`
-      <input class="search" id="q" type="search" placeholder="Search recipes or ingredients" value="${esc(state.query)}" autocomplete="off">
-      <div class="filters">
+      <input class="search" id="q" type="search" placeholder="Search recipes, ingredients or tags" value="${esc(state.query)}" autocomplete="off" autocorrect="off" autocapitalize="none">
+      <div class="filters" id="filters">
         ${chipRow('When', 'effort', DATA.facets.effort)}
         ${chipRow('Protein', 'protein', DATA.facets.protein)}
         ${chipRow('Genre', 'genre', DATA.facets.genre)}
         ${chipRow('Course', 'role', DATA.facets.role)}
-        ${anyFilter ? '<div><button class="chip ghost" id="clear">Clear search and filters</button></div>' : ''}
+        ${DATA.facets.tags && DATA.facets.tags.length ? '<button class="chip ghost" id="toggle-tags" aria-expanded="' + showTags + '">' + (showTags ? 'Hide tags' : 'Tags ▾') + '</button>' + chipRow('Tags', 'tags', DATA.facets.tags, { hidden: !showTags }) : ''}
+        <div><button class="chip ghost" id="clear" ${anyFilterActive() ? '' : 'hidden'}>Clear search and filters</button></div>
       </div>
-      <div class="section"><h2>${list.length === DATA.recipes.length ? 'All recipes' : list.length + ' of ' + DATA.recipes.length + ' recipes'}</h2></div>
-      ${list.length ? '<div class="grid">' + list.map(recipeCard).join('') + '</div>' : '<div class="empty">Nothing matches. Clear a filter or try an ingredient.</div>'}
+      <div class="section"><h2 id="count"></h2></div>
+      <div id="results"></div>
       ${DATA.meals.length ? '<div class="section"><h2>Meals</h2><a href="#/meals">All meals</a></div><div class="grid">' + DATA.meals.slice(0, 4).map(mealCard).join('') + '</div>' : ''}
     `;
+    renderResults();
     var q = document.getElementById('q');
-    q.addEventListener('input', function () { state.query = q.value; persist(); refreshHomeList(); });
+    q.addEventListener('input', function () { state.query = q.value; persist(); syncChips(); renderResults(); });
     app.querySelectorAll('[data-filter]').forEach(function (b) {
       b.addEventListener('click', function () {
-        var k = b.getAttribute('data-filter'), v = b.getAttribute('data-value');
-        state.filters[k] = state.filters[k] === v ? null : v;
-        persist(); viewHome();
+        toggleChip(b.getAttribute('data-filter'), b.getAttribute('data-value'));
+        syncChips(); renderResults();
       });
     });
-    var clear = document.getElementById('clear');
-    if (clear) clear.addEventListener('click', function () {
-      state.query = ''; state.filters = { effort: null, protein: null, genre: null, role: null }; persist(); viewHome();
+    document.getElementById('clear').addEventListener('click', function () {
+      state.query = ''; state.filters = JSON.parse(JSON.stringify(EMPTY_FILTERS)); persist();
+      document.getElementById('q').value = '';
+      syncChips(); renderResults();
+    });
+    var tt = document.getElementById('toggle-tags');
+    if (tt) tt.addEventListener('click', function () {
+      var row = app.querySelector('[data-row="tags"]');
+      var open = row.classList.toggle('collapsed') === false;
+      save('cb.showTags', open);
+      tt.textContent = open ? 'Hide tags' : 'Tags ▾';
+      tt.setAttribute('aria-expanded', String(open));
     });
   }
-  function refreshHomeList() {
-    // Re-render everything but keep the search box focused.
-    var pos = document.getElementById('q').selectionStart;
-    viewHome();
-    var q = document.getElementById('q');
-    q.focus(); try { q.setSelectionRange(pos, pos); } catch (e) { /* ignore */ }
+  function syncChips() {
+    app.querySelectorAll('[data-filter]').forEach(function (b) {
+      var on = chipOn(b.getAttribute('data-filter'), b.getAttribute('data-value'));
+      b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on));
+    });
+    document.getElementById('clear').hidden = !anyFilterActive();
+  }
+  function renderResults() {
+    var list = filtered();
+    document.getElementById('count').textContent = list.length === DATA.recipes.length ? 'All recipes' : list.length + ' of ' + DATA.recipes.length + ' recipes';
+    document.getElementById('results').innerHTML = list.length
+      ? '<div class="grid">' + list.map(recipeCard).join('') + '</div>'
+      : '<div class="empty">Nothing matches. Clear a filter or try an ingredient.</div>';
   }
 
   function viewMeals() {
@@ -248,6 +292,7 @@
         <h1>${esc(r.title)}</h1>
         ${badges(r)}
         ${r.summary ? '<p>' + esc(r.summary) + '</p>' : ''}
+        ${(r.tags || []).length ? '<div class="taglist">' + r.tags.map(function (t) { return '<a class="tag" href="#/" data-tag="' + esc(t) + '">#' + esc(t) + '</a>'; }).join('') + '</div>' : ''}
         <div class="meta">
           ${r.time ? '<span>' + esc(timeText(r)) + '</span>' : ''}
           ${r.source && r.source.name ? '<span>From ' + (r.source.url ? '<a href="' + esc(r.source.url) + '" rel="noopener" target="_blank">' + esc(r.source.name) + '</a>' : esc(r.source.name)) + '</span>' : ''}
@@ -280,6 +325,12 @@
       ${mealsWith.length ? '<div class="panel"><h2>Part of</h2><div class="linkrow">' + mealsWith.map(function (ml) { return '<a class="pill" href="#/meal/' + esc(ml.id) + '">' + esc(ml.title) + '</a>'; }).join('') + '</div></div>' : ''}
     `;
     bindChecklist(app);
+    app.querySelectorAll('[data-tag]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        state.query = ''; state.filters = JSON.parse(JSON.stringify(EMPTY_FILTERS));
+        state.filters.tags = [a.getAttribute('data-tag')]; persist();
+      });
+    });
     document.getElementById('less').addEventListener('click', function () { bump(r, -1); });
     document.getElementById('more').addEventListener('click', function () { bump(r, +1); });
     document.getElementById('tonight').addEventListener('click', function () { toggleTonight(r.id); viewRecipe(id); });

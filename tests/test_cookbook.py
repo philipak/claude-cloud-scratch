@@ -147,6 +147,13 @@ class CompileData(unittest.TestCase):
         self.assertEqual(data["recipes"][0]["tags"], [])
         self.assertEqual(data["meals"][0]["id"], "test-night")
 
+    def test_tag_facet_is_most_used_first(self):
+        a = good_recipe(id="a-dish", tags=["grill", "fast"])
+        b = good_recipe(id="b-dish", tags=["grill"])
+        c = good_recipe(id="c-dish")  # no tags key at all
+        data, _ = compile_data([("a-dish.json", a), ("b-dish.json", b), ("c-dish.json", c)], [])
+        self.assertEqual(data["facets"]["tags"], ["grill", "fast"])
+
     def test_all_problems_reported_at_once(self):
         bad1 = good_recipe(id="bad-one", role="entree")
         bad2 = good_recipe(id="bad-two", effort="someday")

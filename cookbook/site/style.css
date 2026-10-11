@@ -87,9 +87,13 @@ main { max-width: 760px; margin: 0 auto; padding: 16px 16px 48px; }
 }
 .search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .filters { display: flex; flex-direction: column; gap: 8px; margin: 12px 0 18px; }
-.chiprow { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
-.chiprow::-webkit-scrollbar { display: none; }
-.chiprow .label { flex: none; align-self: center; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); min-width: 60px; }
+.chiprow { display: flex; gap: 8px; align-items: flex-start; }
+.chiprow .label { flex: none; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); min-width: 60px; padding-top: 9px; }
+.chiprow .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chiprow.collapsed { display: none; }
+.taglist { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 2px 0 10px; }
+.tag { color: var(--muted); font-size: .9rem; font-weight: 600; }
+.tag:hover { color: var(--accent); }
 .chip {
   flex: none; min-height: 36px; padding: 0 14px; border-radius: 999px;
   border: 1px solid var(--line); background: var(--surface); cursor: pointer;

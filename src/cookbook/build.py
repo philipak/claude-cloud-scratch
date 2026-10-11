@@ -115,11 +115,16 @@ def compile_data(recipes, meals):
         raise BuildError("\n".join(problems))
 
     out_meals.sort(key=lambda m: m["id"])
+    tag_counts = {}
+    for r in out_recipes:
+        for t in r["tags"]:
+            tag_counts[t] = tag_counts.get(t, 0) + 1
     facets = {
         "protein": sorted({r["protein"] for r in out_recipes}),
         "genre": sorted({r["genre"] for r in out_recipes}),
         "role": sorted({r["role"] for r in out_recipes}),
         "effort": sorted({r["effort"] for r in out_recipes}),
+        "tags": sorted(tag_counts, key=lambda t: (-tag_counts[t], t)),
     }
     return {"recipes": out_recipes, "meals": out_meals, "facets": facets}, warnings
 
