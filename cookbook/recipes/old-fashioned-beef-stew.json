@@ -1,0 +1,40 @@
+{
+  "id": "old-fashioned-beef-stew",
+  "title": "Old-Fashioned Beef Stew",
+  "role": "main",
+  "effort": "weekend",
+  "protein": "beef",
+  "genre": "american",
+  "status": "draft",
+  "serves": 4,
+  "time": {"active_min": 15, "total_min": 165},
+  "summary": "Classic red wine beef stew with carrots and potatoes. Mostly hands-off simmering.",
+  "tags": ["stew", "one-pot", "braise"],
+  "source": {"name": "NYT Cooking (Molly O'Neill)", "url": "https://cooking.nytimes.com/recipes/4735-old-fashioned-beef-stew"},
+  "ingredients": [
+    {"id": "flour", "qty": 0.25, "unit": "cup", "item": "all-purpose flour"},
+    {"id": "pepper", "qty": 0.25, "unit": "tsp", "item": "freshly ground black pepper", "note": "plus more to taste"},
+    {"id": "beef", "qty": 1, "unit": "lb", "item": "beef stewing meat", "prep": "trimmed and cut into 1-inch cubes"},
+    {"id": "oil", "qty": 5, "unit": "tsp", "item": "vegetable oil"},
+    {"id": "vinegar", "qty": 2, "unit": "tbsp", "item": "red wine vinegar"},
+    {"id": "wine", "qty": 1, "unit": "cup", "item": "red wine"},
+    {"id": "broth", "qty": 3.5, "unit": "cup", "item": "beef broth", "note": "homemade or low-sodium"},
+    {"id": "bay", "qty": 2, "item": "bay leaves"},
+    {"id": "onion", "qty": 1, "item": "medium onion", "prep": "peeled and chopped"},
+    {"id": "carrots", "qty": 5, "item": "medium carrots", "prep": "peeled, cut into 1/4-inch rounds"},
+    {"id": "potatoes", "qty": 2, "item": "large baking potatoes", "prep": "peeled, cut into 3/4-inch cubes"},
+    {"id": "water", "qty": null, "item": "water or extra broth", "note": "if the stew gets dry", "optional": true},
+    {"id": "salt", "qty": 2, "unit": "tsp", "item": "salt", "note": "adjust to taste"}
+  ],
+  "steps": [
+    {"title": "Coat the beef", "text": "Mix the flour and pepper in a bowl and toss the beef in it until every piece is coated.", "uses": ["flour", "pepper", "beef"]},
+    {"title": "Brown in batches", "text": "Heat 3 tsp of the oil in a large pot. Brown the beef a few pieces at a time, turning until browned on all sides, about 5 minutes a batch. Don't crowd the pot; add more oil between batches as needed.", "uses": ["beef", "oil"], "timer_min": 5},
+    {"title": "Deglaze", "text": "Take out the beef. Add the vinegar and wine and cook over medium-high, scraping up the browned bits.", "uses": ["vinegar", "wine"]},
+    {"title": "Start the simmer", "text": "Return the beef, add the broth and bay leaves, bring to a boil, then drop to a slow simmer.", "uses": ["beef", "broth", "bay"]},
+    {"title": "Simmer until tender", "text": "Cover and cook until the beef is tender, skimming the surface now and then.", "uses": [], "timer_min": 90},
+    {"title": "Onions and carrots", "text": "Add the onion and carrots, cover, and simmer.", "uses": ["onion", "carrots"], "timer_min": 10},
+    {"title": "Potatoes", "text": "Add the potatoes and simmer until all the vegetables are tender. Add broth or water if it looks dry.", "uses": ["potatoes", "water"], "timer_min": 30},
+    {"title": "Season and serve", "text": "Season with salt and more pepper to taste, and pull the bay leaves.", "uses": ["salt", "pepper"]}
+  ],
+  "notes": "As written this serves 4 from 1 lb of beef; NYT says it doubles or triples well, so plan on 2.5x for the family (about 2.5 lb beef). Compare with Philip's own wine-and-whiskey Burgundy stew."
+}
