@@ -1,0 +1,238 @@
+{
+  "id": "smoked-carnitas",
+  "title": "Smoked Carnitas",
+  "role": "main",
+  "effort": "weekend",
+  "protein": "pork",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 60,
+    "total_min": 420
+  },
+  "summary": "Pork shoulder cut into chunks, smoked for bark, braised in citrus and chipotle, then crisped in cast iron.",
+  "tags": [
+    "pellet-grill",
+    "smoker",
+    "braise",
+    "tacos"
+  ],
+  "pairs_with": [
+    "chipotle-crema",
+    "lime-crema",
+    "green-chile-salsa"
+  ],
+  "ingredients": [
+    {
+      "id": "pork",
+      "qty": 8,
+      "unit": "lb",
+      "item": "boneless pork shoulder (butt)",
+      "qty_max": 9,
+      "prep": "cut into 2 1/2-inch chunks, thick fat cap trimmed"
+    },
+    {
+      "id": "salt",
+      "qty": 2,
+      "unit": "tbsp",
+      "item": "kosher salt",
+      "group": "Rub"
+    },
+    {
+      "id": "pepper",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "black pepper",
+      "group": "Rub"
+    },
+    {
+      "id": "cumin",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "ground cumin",
+      "group": "Rub"
+    },
+    {
+      "id": "oregano",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "Mexican oregano",
+      "group": "Rub"
+    },
+    {
+      "id": "ancho",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "ancho or chili powder",
+      "group": "Rub"
+    },
+    {
+      "id": "garlic-powder",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "garlic powder",
+      "group": "Rub"
+    },
+    {
+      "id": "cinnamon",
+      "qty": null,
+      "item": "ground cinnamon",
+      "note": "a pinch",
+      "optional": true,
+      "group": "Rub"
+    },
+    {
+      "id": "oranges",
+      "qty": 2,
+      "item": "oranges",
+      "prep": "juiced, halves kept",
+      "group": "Braise"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "prep": "juiced",
+      "group": "Braise"
+    },
+    {
+      "id": "broth",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "chicken broth",
+      "group": "Braise"
+    },
+    {
+      "id": "chipotles",
+      "qty": 2,
+      "item": "chipotles in adobo",
+      "prep": "minced",
+      "group": "Braise"
+    },
+    {
+      "id": "adobo",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "adobo sauce from the can",
+      "group": "Braise"
+    },
+    {
+      "id": "onion",
+      "qty": 1,
+      "item": "onion",
+      "prep": "quartered",
+      "group": "Braise"
+    },
+    {
+      "id": "garlic",
+      "qty": 6,
+      "unit": "cloves",
+      "item": "garlic",
+      "prep": "smashed and peeled",
+      "group": "Braise"
+    },
+    {
+      "id": "bay",
+      "qty": 2,
+      "item": "bay leaves",
+      "group": "Braise"
+    },
+    {
+      "id": "cinnamon-stick",
+      "qty": 1,
+      "item": "cinnamon stick",
+      "prep": "broken in half",
+      "optional": true,
+      "group": "Braise"
+    },
+    {
+      "id": "lard",
+      "qty": 4,
+      "unit": "tbsp",
+      "item": "lard or butter",
+      "prep": "in pieces",
+      "group": "Braise"
+    },
+    {
+      "id": "tortillas",
+      "qty": null,
+      "item": "corn tortillas",
+      "note": "plenty",
+      "group": "To serve"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Rub",
+      "text": "Mix the rub and coat every chunk of pork.",
+      "uses": [
+        "pork",
+        "salt",
+        "pepper",
+        "cumin",
+        "oregano",
+        "ancho",
+        "garlic-powder",
+        "cinnamon"
+      ]
+    },
+    {
+      "title": "Dry-brine",
+      "text": "Let it sit while the grill heats, about an hour.",
+      "uses": [
+        "pork"
+      ],
+      "timer_min": 60
+    },
+    {
+      "title": "Smoke",
+      "text": "Smoke at 250°F with hickory, oak, or a fruitwood blend, chunks spaced apart on the grates, until 160 to 170°F inside with a deep mahogany bark that doesn't smear when touched, 2 to 2 1/2 hours. If it's colored but under temp, move on; if it's at temp but pale, leave it.",
+      "uses": [
+        "pork"
+      ],
+      "timer_min": 135
+    },
+    {
+      "title": "Mix the braise",
+      "text": "Stir the orange juice, lime juice, broth, chipotles, and adobo. Use room-temperature liquid if braising in stoneware.",
+      "uses": [
+        "oranges",
+        "lime",
+        "broth",
+        "chipotles",
+        "adobo"
+      ]
+    },
+    {
+      "title": "Load the pans",
+      "text": "Pack the chunks snugly into two pans (a 13x9 holds about 5 to 6 lb). Tuck in the onion, garlic, bay leaves, orange halves, and cinnamon stick. Pour in the liquid to about a third of the way up the meat, scatter the lard on top, and crimp foil on tight.",
+      "uses": [
+        "onion",
+        "garlic",
+        "bay",
+        "cinnamon-stick",
+        "lard"
+      ]
+    },
+    {
+      "title": "Braise",
+      "text": "Raise the grill to 300°F and braise until a fork twists through a chunk with no resistance, around 200 to 205°F, 1 1/2 to 2 hours. Give it more time rather than serving it tough.",
+      "uses": [],
+      "timer_min": 105
+    },
+    {
+      "title": "Strain the juices",
+      "text": "Lift out the pork. Pour the juices into a fat separator, mash the soft garlic into them, and discard the orange halves, bay, and cinnamon. Simmer the juices 5 to 10 minutes if they taste thin.",
+      "uses": []
+    },
+    {
+      "title": "Crisp",
+      "text": "Break the pork into rough pieces and crisp in batches in a hot cast-iron pan with spoonfuls of the skimmed fat. Don't crowd the pan. Spoon juices over just before serving with warm tortillas.",
+      "uses": [
+        "tortillas"
+      ]
+    }
+  ],
+  "notes": "Cutting the shoulder into chunks triples the bark and gets you whole-shoulder texture in about half the time, skipping the stall. Stoneware: room-temperature liquid going in, and set it on a dry towel or trivet coming out."
+}

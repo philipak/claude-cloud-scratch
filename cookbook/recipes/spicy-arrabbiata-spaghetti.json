@@ -1,0 +1,188 @@
+{
+  "id": "spicy-arrabbiata-spaghetti",
+  "title": "Spicy Arrabbiata Spaghetti",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "italian",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 25,
+    "total_min": 50
+  },
+  "summary": "From-scratch spicy red sauce built on chiles bloomed in oil and fried tomato paste, with the pasta finished in the pan.",
+  "tags": [
+    "pasta"
+  ],
+  "ingredients": [
+    {
+      "id": "oil",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "olive oil"
+    },
+    {
+      "id": "onion",
+      "qty": 1,
+      "item": "onion",
+      "prep": "finely diced"
+    },
+    {
+      "id": "garlic",
+      "qty": 10,
+      "unit": "cloves",
+      "item": "garlic",
+      "qty_max": 12,
+      "prep": "thinly sliced"
+    },
+    {
+      "id": "chile",
+      "qty": 1.5,
+      "unit": "tsp",
+      "item": "red pepper flakes",
+      "qty_max": 2,
+      "note": "or 2 to 3 tbsp Calabrian chili paste"
+    },
+    {
+      "id": "tomato-paste",
+      "qty": 2,
+      "unit": "tbsp",
+      "item": "tomato paste"
+    },
+    {
+      "id": "tomatoes",
+      "qty": 3,
+      "unit": "28-oz cans",
+      "item": "whole San Marzano tomatoes",
+      "prep": "crushed by hand"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "kosher salt",
+      "note": "to taste"
+    },
+    {
+      "id": "rind",
+      "qty": 1,
+      "item": "Parmesan rind",
+      "optional": true
+    },
+    {
+      "id": "butter",
+      "qty": 2,
+      "unit": "tbsp",
+      "item": "butter",
+      "qty_max": 3,
+      "note": "to tame acidity"
+    },
+    {
+      "id": "baking-soda",
+      "qty": 0.125,
+      "unit": "tsp",
+      "item": "baking soda",
+      "qty_max": 0.25,
+      "optional": true,
+      "note": "only if still sharp after butter"
+    },
+    {
+      "id": "pasta",
+      "qty": 2,
+      "unit": "lb",
+      "item": "spaghetti",
+      "qty_max": 2.5
+    },
+    {
+      "id": "pasta-water",
+      "qty": 1,
+      "unit": "cup",
+      "item": "starchy pasta water"
+    },
+    {
+      "id": "parsley",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "parsley",
+      "prep": "chopped"
+    },
+    {
+      "id": "parmesan",
+      "qty": null,
+      "item": "Parmesan",
+      "prep": "grated",
+      "note": "to serve"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Soften the onion",
+      "text": "Cook the onion in the olive oil until soft.",
+      "uses": [
+        "oil",
+        "onion"
+      ],
+      "timer_min": 6
+    },
+    {
+      "title": "Bloom garlic and chile",
+      "text": "Add the garlic and chile over medium-low until the garlic is pale gold. Brown garlic turns bitter.",
+      "uses": [
+        "garlic",
+        "chile"
+      ],
+      "timer_min": 2
+    },
+    {
+      "title": "Fry the paste",
+      "text": "Add the tomato paste and fry until it darkens to brick red.",
+      "uses": [
+        "tomato-paste"
+      ],
+      "timer_min": 3
+    },
+    {
+      "title": "Simmer",
+      "text": "Add the tomatoes, salt, and rind. Simmer uncovered until thick and glossy.",
+      "uses": [
+        "tomatoes",
+        "salt",
+        "rind"
+      ],
+      "timer_min": 28
+    },
+    {
+      "title": "Fix the acid",
+      "text": "Taste. If it's sharp, stir in the butter first. Still sharp, add a pinch of baking soda, let the foam settle, and taste before adding more. More sugar won't fix it.",
+      "uses": [
+        "butter",
+        "baking-soda"
+      ]
+    },
+    {
+      "title": "Cook the pasta",
+      "text": "Boil the spaghetti in well-salted water, pulling it 2 minutes before done. Save the pasta water.",
+      "uses": [
+        "pasta",
+        "pasta-water"
+      ]
+    },
+    {
+      "title": "Finish in the sauce",
+      "text": "Move the pasta into the sauce with about a cup of pasta water and toss over medium-high for 2 minutes until the sauce clings. Do it in two batches for this much pasta.",
+      "uses": [
+        "pasta-water"
+      ],
+      "timer_min": 2
+    },
+    {
+      "title": "Serve",
+      "text": "Off the heat, toss with parsley and serve with Parmesan.",
+      "uses": [
+        "parsley",
+        "parmesan"
+      ]
+    }
+  ],
+  "notes": "First batch came out acidic even with San Marzanos; cans vary, and many aren't certified DOP. Sugar didn't fix it. Butter first, then baking soda a pinch at a time. Parmesan and pasta water round it out too, so aim for slightly bright in the pot."
+}

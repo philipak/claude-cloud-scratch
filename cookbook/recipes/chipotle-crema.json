@@ -1,0 +1,85 @@
+{
+  "id": "chipotle-crema",
+  "title": "Chipotle Crema",
+  "role": "sauce",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 5,
+    "total_min": 15
+  },
+  "summary": "Smoky, spicy sour cream for tacos. A starting point toward Rocket Taco's Rocket Sauce.",
+  "ingredients": [
+    {
+      "id": "sour-cream",
+      "qty": 1,
+      "unit": "cup",
+      "item": "sour cream"
+    },
+    {
+      "id": "chipotles",
+      "qty": 1,
+      "item": "chipotles in adobo",
+      "qty_max": 2,
+      "prep": "minced almost to a paste"
+    },
+    {
+      "id": "adobo",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "adobo sauce",
+      "qty_max": 2
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "prep": "juiced, zest optional"
+    },
+    {
+      "id": "salt",
+      "qty": 0.25,
+      "unit": "tsp",
+      "item": "kosher salt"
+    },
+    {
+      "id": "milk",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "milk",
+      "qty_max": 2,
+      "optional": true,
+      "note": "to thin for drizzling"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Whisk",
+      "text": "Whisk the sour cream, 1 chipotle, 1 tsp adobo, the lime juice, and salt.",
+      "uses": [
+        "sour-cream",
+        "chipotles",
+        "adobo",
+        "lime",
+        "salt"
+      ]
+    },
+    {
+      "title": "Adjust",
+      "text": "Taste and add more chipotle or adobo for heat. Thin with milk if you want to drizzle.",
+      "uses": [
+        "milk"
+      ]
+    },
+    {
+      "title": "Rest",
+      "text": "Let it sit so the heat settles in; it builds a little as it rests.",
+      "uses": [],
+      "timer_min": 10
+    }
+  ],
+  "notes": "Rocket Taco lists its Rocket Sauce as a chipotle crema but doesn't publish the recipe. If yours tastes off from theirs, adjust toward what you remember (more garlic, more lime, a mayo base)."
+}

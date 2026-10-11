@@ -1,0 +1,102 @@
+{
+  "id": "dried-chile-paste",
+  "title": "Dried Chile Paste",
+  "role": "component",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 15,
+    "total_min": 35
+  },
+  "summary": "Toasted, soaked, and blended guajillo and ancho chiles. Replaces most of the chili powder in taco soup.",
+  "pairs_with": [
+    "taco-soup"
+  ],
+  "ingredients": [
+    {
+      "id": "guajillo",
+      "qty": 3,
+      "item": "dried guajillo chiles"
+    },
+    {
+      "id": "ancho",
+      "qty": 2,
+      "item": "dried ancho chiles"
+    },
+    {
+      "id": "arbol",
+      "qty": 1,
+      "item": "chiles de árbol",
+      "qty_max": 2,
+      "optional": true,
+      "note": "for heat"
+    },
+    {
+      "id": "garlic",
+      "qty": 2,
+      "unit": "cloves",
+      "item": "garlic",
+      "qty_max": 3
+    },
+    {
+      "id": "onion",
+      "qty": 0.25,
+      "item": "onion"
+    },
+    {
+      "id": "liquid",
+      "qty": 1,
+      "unit": "cup",
+      "item": "soaking liquid or stock"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "salt",
+      "note": "a pinch"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Clean",
+      "text": "Snip off the stems, slit the chiles open, and shake out the seeds and pale veins.",
+      "uses": [
+        "guajillo",
+        "ancho",
+        "arbol"
+      ]
+    },
+    {
+      "title": "Toast",
+      "text": "In a dry skillet over medium, press each chile flat for 15 to 30 seconds per side, until it smells toasty and turns a shade brighter. Any black spots or acrid smell: toss it and redo.",
+      "uses": []
+    },
+    {
+      "title": "Soak",
+      "text": "Cover with just-boiled water, weigh down with a small plate, and soak until completely floppy.",
+      "uses": [],
+      "timer_min": 18
+    },
+    {
+      "title": "Taste the water",
+      "text": "Sip the soaking liquid. If it's bitter, discard it and blend with stock instead.",
+      "uses": [
+        "liquid"
+      ]
+    },
+    {
+      "title": "Blend",
+      "text": "Blend the chiles with the garlic, onion, salt, and about a cup of liquid until smooth, about ketchup thickness. Chipotles can go in here too.",
+      "uses": [
+        "garlic",
+        "onion",
+        "salt"
+      ],
+      "timer_min": 2
+    }
+  ],
+  "notes": "Brittle chiles are old; good ones bend. Find them in bags in the Mexican aisle."
+}

@@ -1,0 +1,114 @@
+{
+  "id": "soy-marinated-eggs",
+  "title": "Soy-Marinated Jammy Eggs",
+  "role": "component",
+  "effort": "weeknight",
+  "protein": "eggs",
+  "genre": "korean",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 20,
+    "total_min": 140
+  },
+  "summary": "Six-and-a-half-minute eggs soaked in soy and mirin for rice bowls.",
+  "tags": [
+    "make-ahead",
+    "bowls"
+  ],
+  "ingredients": [
+    {
+      "id": "eggs",
+      "qty": 10,
+      "item": "large eggs",
+      "note": "straight from the fridge"
+    },
+    {
+      "id": "soy",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "soy sauce",
+      "group": "Marinade"
+    },
+    {
+      "id": "mirin",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "mirin",
+      "group": "Marinade"
+    },
+    {
+      "id": "water",
+      "qty": 1,
+      "unit": "cup",
+      "item": "water",
+      "group": "Marinade"
+    },
+    {
+      "id": "sugar",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "sugar",
+      "optional": true,
+      "group": "Marinade"
+    },
+    {
+      "id": "aromatic",
+      "qty": 1,
+      "item": "garlic clove or slice of ginger",
+      "prep": "smashed",
+      "optional": true,
+      "group": "Marinade"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix the marinade",
+      "text": "Stir the soy sauce, mirin, water, and sugar and aromatic if using in a zip-top bag or container.",
+      "uses": [
+        "soy",
+        "mirin",
+        "water",
+        "sugar",
+        "aromatic"
+      ]
+    },
+    {
+      "title": "Boil",
+      "text": "Bring a large pot of water to a full boil. Lower in the cold eggs with a spoon and cook 6 1/2 minutes for jammy yolks. If the pot is small and the water stops boiling for long, go to 7.",
+      "uses": [
+        "eggs"
+      ],
+      "timer_min": 6.5
+    },
+    {
+      "title": "Ice bath",
+      "text": "Move the eggs straight into a big bowl of ice water to stop the cooking and make them easier to peel.",
+      "uses": [
+        "eggs"
+      ],
+      "timer_min": 5
+    },
+    {
+      "title": "Peel",
+      "text": "Crack both ends, roll gently on the counter, and peel, under water if they stick. Soft eggs are fragile.",
+      "uses": [
+        "eggs"
+      ]
+    },
+    {
+      "title": "Marinate",
+      "text": "Submerge the eggs in the marinade, press out the air, and refrigerate at least 2 hours. Overnight gives darker, saltier eggs with firmer yolks.",
+      "uses": [
+        "eggs"
+      ],
+      "timer_min": 120
+    },
+    {
+      "title": "Serve",
+      "text": "Halve lengthwise and set yolk-up on the bowls.",
+      "uses": []
+    }
+  ],
+  "notes": "The marinade is good for one more batch within a few days. Start these first; they need the longest lead time of anything in the bowls."
+}

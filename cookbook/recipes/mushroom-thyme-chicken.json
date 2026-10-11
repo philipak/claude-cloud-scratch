@@ -1,0 +1,200 @@
+{
+  "id": "mushroom-thyme-chicken",
+  "title": "Chicken Thighs in Mushroom-Thyme Yogurt Sauce",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "chicken",
+  "genre": "french",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 45,
+    "total_min": 60
+  },
+  "summary": "Seared thighs finished in a white wine and mushroom pan sauce, made creamy with Greek yogurt and Parmesan.",
+  "tags": [
+    "one-pan",
+    "pan-sauce"
+  ],
+  "pairs_with": [
+    "miso-brown-butter-mash"
+  ],
+  "ingredients": [
+    {
+      "id": "chicken",
+      "qty": 5.5,
+      "unit": "lb",
+      "item": "boneless skinless chicken thighs"
+    },
+    {
+      "id": "salt",
+      "qty": 2,
+      "unit": "tsp",
+      "item": "kosher salt"
+    },
+    {
+      "id": "pepper",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "black pepper"
+    },
+    {
+      "id": "oil",
+      "qty": 3,
+      "unit": "tbsp",
+      "item": "neutral oil"
+    },
+    {
+      "id": "butter",
+      "qty": 3,
+      "unit": "tbsp",
+      "item": "butter"
+    },
+    {
+      "id": "mushrooms",
+      "qty": 2,
+      "unit": "lb",
+      "item": "cremini mushrooms",
+      "prep": "sliced"
+    },
+    {
+      "id": "shallots",
+      "qty": 3,
+      "item": "shallots",
+      "prep": "minced"
+    },
+    {
+      "id": "garlic",
+      "qty": 4,
+      "unit": "cloves",
+      "item": "garlic",
+      "prep": "minced"
+    },
+    {
+      "id": "thyme",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "fresh thyme leaves"
+    },
+    {
+      "id": "wine",
+      "qty": 1.5,
+      "unit": "cup",
+      "item": "dry white wine"
+    },
+    {
+      "id": "beef-stock",
+      "qty": 0.75,
+      "unit": "cup",
+      "item": "beef stock",
+      "note": "or 1 1/2 cups chicken stock and skip the water"
+    },
+    {
+      "id": "water",
+      "qty": 0.75,
+      "unit": "cup",
+      "item": "water"
+    },
+    {
+      "id": "yogurt",
+      "qty": 1,
+      "unit": "cup",
+      "item": "full-fat Greek yogurt",
+      "prep": "room temperature"
+    },
+    {
+      "id": "cornstarch",
+      "qty": 2,
+      "unit": "tsp",
+      "item": "cornstarch"
+    },
+    {
+      "id": "parmesan",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "Parmesan",
+      "prep": "finely grated"
+    },
+    {
+      "id": "lemon",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "lemon juice",
+      "optional": true,
+      "note": "to finish"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Season",
+      "text": "Pat the thighs dry and season with salt and pepper, ideally an hour ahead.",
+      "uses": [
+        "chicken",
+        "salt",
+        "pepper"
+      ]
+    },
+    {
+      "title": "Sear in batches",
+      "text": "Sear in the oil over medium-high without crowding until deeply browned, about 4 minutes a side. They finish in the sauce. Set aside with their juices.",
+      "uses": [
+        "chicken",
+        "oil"
+      ],
+      "timer_min": 8
+    },
+    {
+      "title": "Brown the mushrooms",
+      "text": "Add the butter and mushrooms. Spread them out and leave them alone before stirring so they brown instead of steam. Cook until deep brown and dry.",
+      "uses": [
+        "butter",
+        "mushrooms"
+      ],
+      "timer_min": 12
+    },
+    {
+      "title": "Aromatics",
+      "text": "Add the shallots, garlic, and thyme and stir until fragrant.",
+      "uses": [
+        "shallots",
+        "garlic",
+        "thyme"
+      ],
+      "timer_min": 2
+    },
+    {
+      "title": "Reduce the wine",
+      "text": "Pour in the wine, scrape up the fond, and reduce by at least half. This keeps the acid from splitting the yogurt later.",
+      "uses": [
+        "wine"
+      ],
+      "timer_min": 5
+    },
+    {
+      "title": "Finish the chicken",
+      "text": "Add the stock and water, return the chicken and juices, cover, and simmer gently until the thighs reach about 175°F.",
+      "uses": [
+        "beef-stock",
+        "water"
+      ],
+      "timer_min": 10
+    },
+    {
+      "title": "Stabilize the yogurt",
+      "text": "While it simmers, whisk the yogurt with the cornstarch until smooth. The starch keeps the yogurt from curdling.",
+      "uses": [
+        "yogurt",
+        "cornstarch"
+      ]
+    },
+    {
+      "title": "Temper and finish off the heat",
+      "text": "Take the pan off the heat. Whisk a ladle of hot sauce into the yogurt, then stir it into the pan. Add the Parmesan a handful at a time. Don't let it boil again. Taste, then salt and add lemon if it needs lift.",
+      "uses": [
+        "parmesan",
+        "lemon"
+      ]
+    }
+  ],
+  "notes": "Made with beef stock cut with water and 1/2 cup Parmesan; it leans toward stroganoff and comes out browner. Beef stock and Parmesan are both salty, so salt only at the end."
+}

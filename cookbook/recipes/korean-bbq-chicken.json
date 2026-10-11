@@ -1,38 +1,166 @@
 {
   "id": "korean-bbq-chicken",
-  "title": "Korean BBQ Chicken",
+  "title": "Gochujang-Honey Glazed Chicken",
   "role": "main",
   "effort": "weeknight",
   "protein": "chicken",
   "genre": "korean",
-  "status": "draft",
-  "serves": 4,
-  "time": {"active_min": 20, "total_min": 50},
-  "summary": "Gochujang-marinated thighs, charred under the broiler or on the grill. Sweet, hot, sticky.",
-  "tags": ["grill", "broiler", "marinade", "make-ahead"],
-  "pairs_with": ["roasted-chili-broccoli", "steamed-short-grain-rice"],
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 25,
+    "total_min": 45
+  },
+  "summary": "Broiled thighs brushed with a simmered gochujang-honey glaze in thin coats so it chars instead of burning.",
+  "tags": [
+    "broiler",
+    "bowls"
+  ],
+  "pairs_with": [
+    "steamed-short-grain-rice",
+    "soy-marinated-eggs"
+  ],
   "ingredients": [
-    {"id": "chicken", "qty": 2, "unit": "lb", "item": "boneless skinless chicken thighs", "prep": "trimmed"},
-    {"id": "gochujang", "qty": 3, "unit": "tbsp", "item": "gochujang", "group": "Marinade"},
-    {"id": "soy", "qty": 3, "unit": "tbsp", "item": "soy sauce", "group": "Marinade"},
-    {"id": "brown-sugar", "qty": 2, "unit": "tbsp", "item": "brown sugar", "group": "Marinade"},
-    {"id": "honey", "qty": 1, "unit": "tbsp", "item": "honey", "group": "Marinade"},
-    {"id": "sesame-oil", "qty": 1, "unit": "tbsp", "item": "toasted sesame oil", "group": "Marinade"},
-    {"id": "rice-vinegar", "qty": 1, "unit": "tbsp", "item": "rice vinegar", "group": "Marinade"},
-    {"id": "garlic", "qty": 4, "unit": "cloves", "item": "garlic", "prep": "grated", "group": "Marinade"},
-    {"id": "ginger", "qty": 1, "unit": "tbsp", "item": "fresh ginger", "prep": "grated", "group": "Marinade"},
-    {"id": "pear", "qty": 0.5, "item": "Asian pear", "prep": "grated", "optional": true, "note": "tenderizes and sweetens; skip if you don't have one", "group": "Marinade"},
-    {"id": "oil", "qty": 1, "unit": "tbsp", "item": "neutral oil"},
-    {"id": "scallions", "qty": 2, "item": "scallions", "prep": "thinly sliced", "group": "To finish"},
-    {"id": "sesame-seeds", "qty": 1, "unit": "tbsp", "item": "toasted sesame seeds", "group": "To finish"}
+    {
+      "id": "chicken",
+      "qty": 5.5,
+      "unit": "lb",
+      "item": "boneless skinless chicken thighs"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "kosher salt",
+      "note": "light hand; the glaze is salty"
+    },
+    {
+      "id": "gochujang",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "gochujang",
+      "group": "Glaze"
+    },
+    {
+      "id": "honey",
+      "qty": 0.333,
+      "unit": "cup",
+      "item": "honey",
+      "group": "Glaze"
+    },
+    {
+      "id": "soy",
+      "qty": 0.25,
+      "unit": "cup",
+      "item": "soy sauce",
+      "group": "Glaze"
+    },
+    {
+      "id": "rice-vinegar",
+      "qty": 2,
+      "unit": "tbsp",
+      "item": "rice vinegar",
+      "group": "Glaze"
+    },
+    {
+      "id": "sesame-oil",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "toasted sesame oil",
+      "group": "Glaze"
+    },
+    {
+      "id": "garlic",
+      "qty": 4,
+      "unit": "cloves",
+      "item": "garlic",
+      "prep": "grated",
+      "group": "Glaze"
+    },
+    {
+      "id": "ginger",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "fresh ginger",
+      "prep": "grated",
+      "group": "Glaze"
+    },
+    {
+      "id": "gochugaru",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "gochugaru",
+      "qty_max": 2,
+      "optional": true,
+      "note": "for more heat",
+      "group": "Glaze"
+    },
+    {
+      "id": "scallions",
+      "qty": 4,
+      "item": "scallions",
+      "prep": "thinly sliced",
+      "group": "To finish"
+    },
+    {
+      "id": "sesame-seeds",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "toasted sesame seeds",
+      "group": "To finish"
+    }
   ],
   "steps": [
-    {"title": "Marinade", "text": "Whisk the gochujang, soy sauce, brown sugar, honey, sesame oil, rice vinegar, garlic, ginger and pear (if using) in a large bowl until smooth.", "uses": ["gochujang", "soy", "brown-sugar", "honey", "sesame-oil", "rice-vinegar", "garlic", "ginger", "pear"]},
-    {"title": "Marinate", "text": "Add the chicken and turn to coat every piece. Cover and refrigerate at least 30 minutes, up to overnight. Pull it out 20 minutes before cooking.", "uses": ["chicken"], "timer_min": 30},
-    {"title": "Heat", "text": "Broiler: set a rack 6 inches from the element, line a sheet pan with foil, brush with the oil, and preheat on high for 5 minutes. Grill: medium-high, grates oiled.", "uses": ["oil"]},
-    {"title": "Cook side one", "text": "Lay the thighs out flat without crowding. Broil or grill until deeply browned with charred edges, 6 to 7 minutes. The sugar will blacken in spots; that's the point.", "uses": ["chicken"], "timer_min": 6},
-    {"title": "Cook side two", "text": "Flip and cook until the thickest piece reads 165°F and the glaze is sticky, 5 to 6 minutes more.", "uses": ["chicken"], "timer_min": 5},
-    {"title": "Rest and finish", "text": "Rest 5 minutes, then slice into strips. Scatter with scallions and sesame seeds and spoon any pan juices over the top.", "uses": ["scallions", "sesame-seeds"], "timer_min": 5}
+    {
+      "title": "Simmer the glaze",
+      "text": "Whisk the glaze ingredients in a small saucepan and simmer until glossy and it coats a spoon. Simmering takes the raw edge off the garlic and helps it stick.",
+      "uses": [
+        "gochujang",
+        "honey",
+        "soy",
+        "rice-vinegar",
+        "sesame-oil",
+        "garlic",
+        "ginger",
+        "gochugaru"
+      ],
+      "timer_min": 4
+    },
+    {
+      "title": "Set some aside",
+      "text": "Pour about 1/3 cup into a separate bowl for drizzling at the table, before any brush touches raw chicken.",
+      "uses": []
+    },
+    {
+      "title": "Season",
+      "text": "Season the thighs lightly with salt and lay them flat on a foil-lined sheet pan.",
+      "uses": [
+        "chicken",
+        "salt"
+      ]
+    },
+    {
+      "title": "Broil unglazed",
+      "text": "Broil about 6 inches from the element until nearly cooked through, flipping once, 10 to 12 minutes depending on thickness.",
+      "uses": [
+        "chicken"
+      ],
+      "timer_min": 11
+    },
+    {
+      "title": "Glaze in coats",
+      "text": "Brush on the glaze in 2 or 3 thin coats over the last 3 to 5 minutes, letting each coat bubble and set before the next. Thin coats caramelize; one thick coat burns before it sets. Watch closely.",
+      "uses": [],
+      "timer_min": 4
+    },
+    {
+      "title": "Finish",
+      "text": "Rest a few minutes, slice, and top with scallions and sesame seeds. Drizzle with the reserved glaze.",
+      "uses": [
+        "scallions",
+        "sesame-seeds"
+      ],
+      "timer_min": 3
+    }
   ],
-  "notes": "Thighs forgive the high heat; breasts dry out before the glaze chars. Double the marinade and freeze half with raw chicken for a zero-effort weeknight."
+  "notes": "Taste the glaze before you start: gochujang brands vary in heat and salt, so adjust with honey or vinegar. Same glaze-in-coats technique works for BBQ chicken."
 }

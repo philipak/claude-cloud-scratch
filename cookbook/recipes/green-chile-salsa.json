@@ -1,0 +1,72 @@
+{
+  "id": "green-chile-salsa",
+  "title": "Green Chile Salsa",
+  "role": "sauce",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 10,
+    "total_min": 10
+  },
+  "summary": "Canned green chiles, onion, cilantro, and lime. Fresh acid on top of rich pork.",
+  "ingredients": [
+    {
+      "id": "chiles",
+      "qty": 4,
+      "unit": "oz",
+      "item": "canned diced green chiles",
+      "prep": "drained, a splash of liquid saved"
+    },
+    {
+      "id": "onion",
+      "qty": 0.25,
+      "item": "onion",
+      "prep": "finely diced"
+    },
+    {
+      "id": "cilantro",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "cilantro",
+      "prep": "chopped"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "prep": "juiced"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "kosher salt",
+      "note": "to taste"
+    },
+    {
+      "id": "jalapeno",
+      "qty": 1,
+      "item": "jalapeño",
+      "prep": "minced",
+      "optional": true,
+      "note": "for heat"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mix",
+      "text": "Stir everything together with a splash of the chile liquid. Salt to taste.",
+      "uses": [
+        "chiles",
+        "onion",
+        "cilantro",
+        "lime",
+        "salt",
+        "jalapeno"
+      ]
+    }
+  ],
+  "notes": "Don't put canned green chiles in a long braise; their mild flavor disappears. They work best raw like this."
+}

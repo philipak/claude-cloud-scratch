@@ -1,0 +1,247 @@
+{
+  "id": "taco-soup",
+  "title": "Taco Soup",
+  "role": "soup",
+  "effort": "weeknight",
+  "protein": "beef",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 30,
+    "total_min": 60
+  },
+  "summary": "Beef charred hard with salsa and spices, deglazed with stock, and loaded with corn and three kinds of beans.",
+  "tags": [
+    "one-pot"
+  ],
+  "pairs_with": [
+    "lime-crema"
+  ],
+  "ingredients": [
+    {
+      "id": "onions",
+      "qty": 2,
+      "item": "onions",
+      "prep": "diced"
+    },
+    {
+      "id": "garlic",
+      "qty": 6,
+      "unit": "cloves",
+      "item": "garlic",
+      "prep": "minced"
+    },
+    {
+      "id": "cilantro",
+      "qty": 1,
+      "item": "bunch cilantro",
+      "prep": "stems minced, leaves chopped separately"
+    },
+    {
+      "id": "oil",
+      "qty": 2,
+      "unit": "tbsp",
+      "item": "neutral oil"
+    },
+    {
+      "id": "beef",
+      "qty": 3,
+      "unit": "lb",
+      "item": "ground beef"
+    },
+    {
+      "id": "cumin",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "ground cumin",
+      "group": "Spices"
+    },
+    {
+      "id": "chili-powder",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "chili powder",
+      "note": "half your usual if using the chile paste",
+      "group": "Spices"
+    },
+    {
+      "id": "garlic-powder",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "garlic powder",
+      "group": "Spices"
+    },
+    {
+      "id": "chile-paste",
+      "qty": 1,
+      "item": "batch Dried Chile Paste",
+      "optional": true,
+      "note": "see Dried Chile Paste"
+    },
+    {
+      "id": "salsa",
+      "qty": 1.5,
+      "unit": "cup",
+      "item": "salsa"
+    },
+    {
+      "id": "chipotles",
+      "qty": 2,
+      "item": "chipotles in adobo",
+      "qty_max": 3,
+      "prep": "minced",
+      "optional": true
+    },
+    {
+      "id": "stock",
+      "qty": 6,
+      "unit": "cup",
+      "item": "beef stock"
+    },
+    {
+      "id": "corn",
+      "qty": 2,
+      "unit": "15-oz cans",
+      "item": "corn, drained"
+    },
+    {
+      "id": "pintos",
+      "qty": 1,
+      "unit": "15-oz can",
+      "item": "pinto beans, drained"
+    },
+    {
+      "id": "black-beans",
+      "qty": 1,
+      "unit": "15-oz can",
+      "item": "black beans, drained"
+    },
+    {
+      "id": "kidney",
+      "qty": 1,
+      "unit": "15-oz can",
+      "item": "kidney beans, drained"
+    },
+    {
+      "id": "poblano",
+      "qty": 1,
+      "item": "poblano",
+      "optional": true,
+      "prep": "charred, peeled, seeded, diced"
+    },
+    {
+      "id": "masa",
+      "qty": 3,
+      "unit": "tbsp",
+      "item": "masa harina",
+      "optional": true,
+      "note": "to thicken"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "qty_max": 2,
+      "prep": "juiced"
+    },
+    {
+      "id": "salt",
+      "qty": null,
+      "item": "kosher salt",
+      "note": "to taste"
+    },
+    {
+      "id": "toppings",
+      "qty": null,
+      "item": "sour cream or lime crema, tortilla chips, shredded cheese, pickled red onion",
+      "group": "To serve"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Aromatics",
+      "text": "Sauté the onions, garlic, and cilantro stems in the oil until soft. Save the leaves for the end.",
+      "uses": [
+        "onions",
+        "garlic",
+        "cilantro",
+        "oil"
+      ],
+      "timer_min": 6
+    },
+    {
+      "title": "Brown hard",
+      "text": "Add the beef and let it brown hard, until it chars in spots.",
+      "uses": [
+        "beef"
+      ],
+      "timer_min": 10
+    },
+    {
+      "title": "Bloom the spices",
+      "text": "Push the meat aside and fry the cumin, chili powder, and garlic powder in the fat for about 45 seconds, before anything wet goes in.",
+      "uses": [
+        "cumin",
+        "chili-powder",
+        "garlic-powder"
+      ],
+      "timer_min": 1
+    },
+    {
+      "title": "Fry the chile paste",
+      "text": "If using, add the paste and stir it in the fat until it darkens to brick red and starts sticking.",
+      "uses": [
+        "chile-paste"
+      ],
+      "timer_min": 4
+    },
+    {
+      "title": "Salsa down",
+      "text": "Add the salsa and chipotles and cook until it darkens and sticks a bit.",
+      "uses": [
+        "salsa",
+        "chipotles"
+      ],
+      "timer_min": 4
+    },
+    {
+      "title": "Deglaze",
+      "text": "Pour in the stock, scraping up every browned bit, and simmer.",
+      "uses": [
+        "stock"
+      ],
+      "timer_min": 15
+    },
+    {
+      "title": "Beans and corn",
+      "text": "Add the corn, beans, and poblano and simmer.",
+      "uses": [
+        "corn",
+        "pintos",
+        "black-beans",
+        "kidney",
+        "poblano"
+      ],
+      "timer_min": 15
+    },
+    {
+      "title": "Thicken",
+      "text": "Optional: whisk the masa into 1/2 cup hot broth, stir it back in, and cook the full 10 minutes so it doesn't taste raw.",
+      "uses": [
+        "masa"
+      ],
+      "timer_min": 10
+    },
+    {
+      "title": "Finish",
+      "text": "Off the heat, squeeze in the lime, stir in the cilantro leaves, and salt to taste. Serve with the toppings.",
+      "uses": [
+        "lime",
+        "salt",
+        "toppings"
+      ]
+    }
+  ],
+  "notes": "Quantities are estimates for a 10-serving pot; adjust to how you've always made it. Lime at the end is the only real acid besides the salsa, and it keeps four kinds of beans from getting heavy."
+}

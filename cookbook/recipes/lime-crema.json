@@ -1,0 +1,84 @@
+{
+  "id": "lime-crema",
+  "title": "Lime Crema",
+  "role": "sauce",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "mexican",
+  "status": "tested",
+  "serves": 10,
+  "time": {
+    "active_min": 5,
+    "total_min": 15
+  },
+  "summary": "Sour cream with lime zest and juice. Cool and bright against rich soups and tacos.",
+  "ingredients": [
+    {
+      "id": "sour-cream",
+      "qty": 1,
+      "unit": "cup",
+      "item": "sour cream"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "qty_max": 2,
+      "prep": "zested, then juiced"
+    },
+    {
+      "id": "salt",
+      "qty": 0.25,
+      "unit": "tsp",
+      "item": "kosher salt"
+    },
+    {
+      "id": "garlic",
+      "qty": 1,
+      "item": "small garlic clove",
+      "prep": "grated",
+      "optional": true
+    },
+    {
+      "id": "milk",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "milk",
+      "qty_max": 2,
+      "optional": true,
+      "note": "to thin"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Zest first",
+      "text": "Zest the lime before cutting it, then juice it.",
+      "uses": [
+        "lime"
+      ]
+    },
+    {
+      "title": "Whisk",
+      "text": "Whisk the sour cream, zest, juice of one lime, salt, and garlic if using.",
+      "uses": [
+        "sour-cream",
+        "salt",
+        "garlic"
+      ]
+    },
+    {
+      "title": "Adjust",
+      "text": "Taste. Add more juice for tang, and milk a spoonful at a time to drizzle instead of dollop.",
+      "uses": [
+        "milk"
+      ]
+    },
+    {
+      "title": "Rest",
+      "text": "Let it sit so the zest flavors the cream.",
+      "uses": [],
+      "timer_min": 10
+    }
+  ],
+  "notes": "The zest carries the lime aroma; the juice mostly adds tang. Stir a minced chipotle into half for a second, smoky crema."
+}
