@@ -1,0 +1,98 @@
+{
+  "id": "chimichurri",
+  "title": "Chimichurri",
+  "role": "sauce",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "argentine",
+  "status": "draft",
+  "serves": 10,
+  "time": {
+    "active_min": 10,
+    "total_min": 15
+  },
+  "summary": "Parsley, raw garlic, red wine vinegar, and olive oil. Sharp and fresh against grilled steak.",
+  "tags": [
+    "no-cook",
+    "make-ahead"
+  ],
+  "pairs_with": [
+    "grilled-flank-steak"
+  ],
+  "ingredients": [
+    {
+      "id": "garlic",
+      "qty": 4,
+      "unit": "cloves",
+      "item": "garlic",
+      "prep": "minced"
+    },
+    {
+      "id": "vinegar",
+      "qty": 0.333,
+      "unit": "cup",
+      "item": "red wine vinegar"
+    },
+    {
+      "id": "oregano",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "dried oregano",
+      "note": "or 1 tbsp fresh"
+    },
+    {
+      "id": "chili",
+      "qty": 0.5,
+      "qty_max": 1,
+      "unit": "tsp",
+      "item": "red pepper flakes"
+    },
+    {
+      "id": "salt",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "kosher salt"
+    },
+    {
+      "id": "parsley",
+      "qty": 1.5,
+      "unit": "cup",
+      "item": "flat-leaf parsley",
+      "prep": "finely chopped (1 big bunch)"
+    },
+    {
+      "id": "oil",
+      "qty": 0.75,
+      "unit": "cup",
+      "item": "olive oil"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Tame the garlic",
+      "text": "Stir the garlic, vinegar, oregano, chili flakes, and salt together and let it sit. The vinegar takes the harsh edge off the raw garlic.",
+      "uses": [
+        "garlic",
+        "vinegar",
+        "oregano",
+        "chili",
+        "salt"
+      ],
+      "timer_min": 5
+    },
+    {
+      "title": "Finish",
+      "text": "Stir in the parsley and olive oil. Chop the parsley by hand; a food processor bruises it into a paste.",
+      "uses": [
+        "parsley",
+        "oil"
+      ]
+    },
+    {
+      "title": "Rest",
+      "text": "Let it sit while the steak cooks. It gets better for the first hour.",
+      "uses": []
+    }
+  ],
+  "notes": "Homemade beats jarred here: the parsley, raw garlic, and vinegar are the whole point and all fade in a jar. To rescue a jarred one, stir in a fresh garlic clove, a splash of red wine vinegar, and chopped parsley."
+}

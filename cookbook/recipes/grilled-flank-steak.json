@@ -1,0 +1,85 @@
+{
+  "id": "grilled-flank-steak",
+  "title": "Grilled Flank Steak",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "beef",
+  "genre": "any",
+  "status": "draft",
+  "serves": 10,
+  "time": {
+    "active_min": 15,
+    "total_min": 35
+  },
+  "summary": "Salt-and-pepper flank, hot and fast on the grill, sliced thin against the grain. Built for a sharp sauce on top.",
+  "tags": [
+    "grill"
+  ],
+  "pairs_with": [
+    "chimichurri",
+    "chipotle-compound-butter",
+    "chipotle-honey-sweet-potato-wedges",
+    "lemony-kale-salad"
+  ],
+  "ingredients": [
+    {
+      "id": "steak",
+      "qty": 4,
+      "qty_max": 5,
+      "unit": "lb",
+      "item": "flank steak"
+    },
+    {
+      "id": "salt",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "kosher salt"
+    },
+    {
+      "id": "pepper",
+      "qty": 1.5,
+      "unit": "tsp",
+      "item": "black pepper"
+    },
+    {
+      "id": "oil",
+      "qty": 1,
+      "unit": "tbsp",
+      "item": "neutral oil"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Season",
+      "text": "Pat the steak dry, season with salt and pepper, and let it sit out while the grill heats. Earlier is better if there's time.",
+      "uses": [
+        "steak",
+        "salt",
+        "pepper"
+      ],
+      "timer_min": 20
+    },
+    {
+      "title": "Heat the grill",
+      "text": "Get the grill very hot and oil the grates.",
+      "uses": [
+        "oil"
+      ]
+    },
+    {
+      "title": "Grill",
+      "text": "Grill hot and fast to about 130°F for medium-rare, 4 to 5 minutes a side. Flank goes from pink to tough quickly, so pull it on time.",
+      "uses": [
+        "steak"
+      ],
+      "timer_min": 9
+    },
+    {
+      "title": "Rest and slice",
+      "text": "Rest, then slice thin across the grain. Find the long muscle lines and cut straight across them.",
+      "uses": [],
+      "timer_min": 10
+    }
+  ],
+  "notes": "Flank is lean, so the sauce does a lot of the work: chimichurri for brightness, or the chipotle butter for richness. Also works sliced into tortillas as carne asada-style tacos."
+}

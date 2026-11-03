@@ -1,0 +1,108 @@
+{
+  "id": "lemony-kale-salad",
+  "title": "Lemony Kale and Parmesan Salad",
+  "role": "salad",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "any",
+  "status": "draft",
+  "serves": 10,
+  "time": {
+    "active_min": 15,
+    "total_min": 15
+  },
+  "summary": "Sharp, crunchy, cold salad of kale or romaine, lemon, shaved Parmesan, and toasted seeds. Cuts through steak and sweet potatoes.",
+  "tags": [
+    "no-cook"
+  ],
+  "pairs_with": [
+    "grilled-flank-steak"
+  ],
+  "ingredients": [
+    {
+      "id": "greens",
+      "qty": 2,
+      "item": "bunches lacinato kale or heads of romaine",
+      "prep": "kale stemmed and thinly sliced; romaine chopped"
+    },
+    {
+      "id": "lemon",
+      "qty": 0.25,
+      "unit": "cup",
+      "item": "lemon juice",
+      "note": "about 2 lemons",
+      "group": "Dressing"
+    },
+    {
+      "id": "olive-oil",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "olive oil",
+      "group": "Dressing"
+    },
+    {
+      "id": "dijon",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "Dijon mustard",
+      "group": "Dressing"
+    },
+    {
+      "id": "garlic",
+      "qty": 1,
+      "item": "garlic clove",
+      "prep": "grated",
+      "group": "Dressing"
+    },
+    {
+      "id": "salt",
+      "qty": 0.75,
+      "unit": "tsp",
+      "item": "kosher salt",
+      "group": "Dressing"
+    },
+    {
+      "id": "parmesan",
+      "qty": 1,
+      "unit": "cup",
+      "item": "Parmesan",
+      "prep": "shaved"
+    },
+    {
+      "id": "seeds",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "pepitas or sunflower seeds",
+      "prep": "toasted"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Dressing",
+      "text": "Shake or whisk the lemon juice, olive oil, Dijon, garlic, and salt.",
+      "uses": [
+        "lemon",
+        "olive-oil",
+        "dijon",
+        "garlic",
+        "salt"
+      ]
+    },
+    {
+      "title": "Dress the greens",
+      "text": "Kale: massage with a third of the dressing for a minute to soften it, ahead of time is fine. Romaine: dress right before serving so it stays crisp.",
+      "uses": [
+        "greens"
+      ]
+    },
+    {
+      "title": "Finish",
+      "text": "Toss with the rest of the dressing and top with Parmesan and toasted seeds.",
+      "uses": [
+        "parmesan",
+        "seeds"
+      ]
+    }
+  ],
+  "notes": "Something cold and acidic on the plate does more next to rich steak than another hot vegetable."
+}

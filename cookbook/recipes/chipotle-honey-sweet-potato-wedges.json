@@ -1,0 +1,109 @@
+{
+  "id": "chipotle-honey-sweet-potato-wedges",
+  "title": "Chipotle-Honey Sweet Potato Wedges",
+  "role": "starch",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "any",
+  "status": "draft",
+  "serves": 10,
+  "time": {
+    "active_min": 15,
+    "total_min": 55
+  },
+  "summary": "Cornstarch-dusted wedges roasted hot on two pans, then tossed in chipotle, honey, and lime.",
+  "tags": [
+    "sheet-pan"
+  ],
+  "pairs_with": [
+    "grilled-flank-steak"
+  ],
+  "ingredients": [
+    {
+      "id": "potatoes",
+      "qty": 5,
+      "unit": "lb",
+      "item": "sweet potatoes",
+      "prep": "cut into wedges, skin on"
+    },
+    {
+      "id": "cornstarch",
+      "qty": 1,
+      "qty_max": 2,
+      "unit": "tbsp",
+      "item": "cornstarch"
+    },
+    {
+      "id": "oil",
+      "qty": 0.25,
+      "unit": "cup",
+      "item": "neutral oil"
+    },
+    {
+      "id": "salt",
+      "qty": 2,
+      "unit": "tsp",
+      "item": "kosher salt"
+    },
+    {
+      "id": "honey",
+      "qty": 3,
+      "unit": "tbsp",
+      "item": "honey",
+      "group": "Glaze"
+    },
+    {
+      "id": "chipotle",
+      "qty": 1,
+      "qty_max": 2,
+      "item": "chipotles in adobo",
+      "prep": "minced",
+      "group": "Glaze"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "prep": "juiced",
+      "group": "Glaze"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Heat the oven",
+      "text": "Heat the oven to 450°F.",
+      "uses": []
+    },
+    {
+      "title": "Coat",
+      "text": "Toss the wedges with the cornstarch first, then the oil and salt. The cornstarch dries the surface and helps it crisp.",
+      "uses": [
+        "potatoes",
+        "cornstarch",
+        "oil",
+        "salt"
+      ]
+    },
+    {
+      "title": "Spread out",
+      "text": "Spread across two sheet pans with space between the wedges. Crowded wedges steam each other and go soft.",
+      "uses": []
+    },
+    {
+      "title": "Roast",
+      "text": "Roast, flipping halfway, until browned at the edges and tender inside.",
+      "uses": [],
+      "timer_min": 35
+    },
+    {
+      "title": "Glaze",
+      "text": "Warm the honey, chipotle, and lime juice together and toss with the hot wedges right out of the oven. Glazing at the end keeps the honey from burning.",
+      "uses": [
+        "honey",
+        "chipotle",
+        "lime"
+      ]
+    }
+  ],
+  "notes": "Sweet potatoes hold more water and sugar than regular potatoes, which is why they go soggy. Cornstarch, space on the pan, and glaze-last fix it."
+}

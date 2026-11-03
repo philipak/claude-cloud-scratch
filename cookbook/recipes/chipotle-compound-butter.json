@@ -1,0 +1,88 @@
+{
+  "id": "chipotle-compound-butter",
+  "title": "Chipotle Compound Butter",
+  "role": "sauce",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "mexican",
+  "status": "draft",
+  "serves": 10,
+  "time": {
+    "active_min": 5,
+    "total_min": 35
+  },
+  "summary": "Soft butter with chipotle, adobo, and lime zest. A slice melts over hot steak. Optional alternative to chimichurri.",
+  "tags": [
+    "make-ahead"
+  ],
+  "pairs_with": [
+    "grilled-flank-steak"
+  ],
+  "ingredients": [
+    {
+      "id": "butter",
+      "qty": 0.5,
+      "unit": "cup",
+      "item": "unsalted butter",
+      "prep": "softened (1 stick)"
+    },
+    {
+      "id": "chipotle",
+      "qty": 1,
+      "qty_max": 2,
+      "item": "chipotles in adobo",
+      "prep": "minced to a paste"
+    },
+    {
+      "id": "adobo",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "adobo sauce"
+    },
+    {
+      "id": "lime",
+      "qty": 1,
+      "item": "lime",
+      "prep": "zested"
+    },
+    {
+      "id": "salt",
+      "qty": 0.25,
+      "unit": "tsp",
+      "item": "flaky or kosher salt"
+    },
+    {
+      "id": "honey",
+      "qty": 1,
+      "unit": "tsp",
+      "item": "honey",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "title": "Mash",
+      "text": "Mash everything together with a fork until evenly streaked orange.",
+      "uses": [
+        "butter",
+        "chipotle",
+        "adobo",
+        "lime",
+        "salt",
+        "honey"
+      ]
+    },
+    {
+      "title": "Roll and chill",
+      "text": "Roll into a log in plastic wrap or parchment and chill until firm enough to slice.",
+      "uses": [],
+      "timer_min": 30
+    },
+    {
+      "title": "Serve",
+      "text": "Set a slice on each portion of hot steak right after slicing so it melts into the juices.",
+      "uses": []
+    }
+  ],
+  "notes": "Keeps a week in the fridge or months frozen. Good way to use up leftover chipotles from an open can. Also good on corn, sweet potatoes, or grilled chicken."
+}
