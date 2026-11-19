@@ -1,0 +1,31 @@
+{
+  "id": "blistered-cherry-tomatoes",
+  "title": "Blistered Cherry Tomatoes",
+  "role": "side",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "italian",
+  "status": "draft",
+  "serves": 10,
+  "time": {"active_min": 10, "total_min": 10},
+  "summary": "Cherry tomatoes charred in a hot pan until they split and turn jammy, with garlic, chili, and a splash of vinegar. A bright, acidic topping for rich bowls.",
+  "tags": ["cast-iron", "stovetop", "topping"],
+  "pairs_with": ["stovetop-mac-and-cheese"],
+  "ingredients": [
+    {"id": "tomatoes", "qty": 2, "unit": "pints", "item": "cherry or grape tomatoes", "prep": "left whole"},
+    {"id": "oil", "qty": 2, "unit": "tbsp", "item": "olive oil", "note": "or leftover fat from browned sausage"},
+    {"id": "garlic", "qty": 4, "unit": "cloves", "item": "garlic", "prep": "thinly sliced"},
+    {"id": "chili", "qty": 0.5, "unit": "tsp", "item": "red pepper flakes"},
+    {"id": "salt", "qty": 0.5, "unit": "tsp", "item": "kosher salt"},
+    {"id": "vinegar", "qty": 1, "unit": "tsp", "item": "red wine or balsamic vinegar"},
+    {"id": "herbs", "qty": null, "item": "basil or parsley", "prep": "torn", "note": "a handful"}
+  ],
+  "steps": [
+    {"title": "Heat the pan", "text": "Heat the oil in cast iron over medium-high until it shimmers. A pan that just browned sausage works well.", "uses": ["oil"]},
+    {"title": "Blister without stirring", "text": "Add the tomatoes in a single layer and leave them alone until the bottoms char and skins start to split. Work in batches if needed; crowded tomatoes steam instead of blistering.", "uses": ["tomatoes"], "timer_min": 3},
+    {"title": "Shake and finish", "text": "Shake the pan and cook until most are blistered and a few have burst and gone jammy.", "uses": [], "timer_min": 3},
+    {"title": "Garlic and chili", "text": "Add the garlic and chili flakes for the last minute only, so the garlic turns golden without burning.", "uses": ["garlic", "chili"], "timer_min": 1},
+    {"title": "Season off the heat", "text": "Take off the heat and stir in the salt, vinegar, and herbs.", "uses": ["salt", "vinegar", "herbs"]}
+  ],
+  "notes": "Blistering concentrates the sugar and removes the raw, watery texture, so this wins over tomato skeptics more often than raw tomatoes do. Serve in a bowl on the table rather than on every plate, and make sure each bowl gets a few of the burst ones; those are the sweetest. Good spooned over mac and cheese with browned Italian sausage."
+}
