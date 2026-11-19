@@ -1,0 +1,35 @@
+{
+  "id": "stovetop-mac-and-cheese",
+  "title": "Stovetop Mac and Cheese",
+  "role": "main",
+  "effort": "weeknight",
+  "protein": "none",
+  "genre": "american",
+  "status": "tested",
+  "serves": 10,
+  "time": {"active_min": 30, "total_min": 35},
+  "summary": "Creamy shells in a roux-based sauce with milk, whole-milk yogurt, and a Gouda, fontina, Manchego, and cheddar blend. Served straight from the pot as the main event.",
+  "tags": ["pasta", "stovetop"],
+  "ingredients": [
+    {"id": "pasta", "qty": 2, "unit": "lb", "item": "medium shells", "note": "two 1-lb boxes"},
+    {"id": "pasta-salt", "qty": null, "item": "kosher salt", "note": "for the pasta water"},
+    {"id": "butter", "qty": 0.5, "unit": "cup", "item": "unsalted butter", "note": "1 stick"},
+    {"id": "flour", "qty": 0.5, "unit": "cup", "item": "all-purpose flour"},
+    {"id": "milk", "qty": 3, "unit": "cup", "item": "whole milk", "note": "added in two parts: 2 cups, then 1 cup"},
+    {"id": "yogurt", "qty": 1, "unit": "cup", "item": "whole-milk yogurt"},
+    {"id": "gouda", "qty": null, "item": "Gouda", "prep": "grated", "note": "one block", "group": "Cheese (about 4 cups total)"},
+    {"id": "fontina", "qty": null, "item": "fontina", "prep": "grated", "note": "one block", "group": "Cheese (about 4 cups total)"},
+    {"id": "manchego", "qty": null, "item": "Manchego", "prep": "grated", "note": "one block", "group": "Cheese (about 4 cups total)"},
+    {"id": "cheddar", "qty": null, "item": "cheddar", "prep": "grated", "note": "enough to fill out to about 4 cups", "group": "Cheese (about 4 cups total)"},
+    {"id": "salt", "qty": null, "item": "salt", "note": "to taste"}
+  ],
+  "steps": [
+    {"title": "Cook the pasta", "text": "Boil the shells in well-salted water until just tender, then drain.", "uses": ["pasta", "pasta-salt"], "timer_min": 10},
+    {"title": "Make the roux", "text": "Melt the butter in a double boiler and whisk in the flour until smooth.", "uses": ["butter", "flour"], "timer_min": 2},
+    {"title": "First milk", "text": "Stir in 2 cups of the milk until smooth and starting to thicken.", "uses": ["milk"]},
+    {"title": "Milk and yogurt", "text": "Stir in the remaining cup of milk and the yogurt until smooth.", "uses": ["yogurt"]},
+    {"title": "Melt in the cheese", "text": "Add the cheese a handful at a time, stirring until each addition melts.", "uses": ["gouda", "fontina", "manchego", "cheddar"]},
+    {"title": "Season and combine", "text": "Salt to taste, then fold in the drained shells and serve straight from the pot.", "uses": ["salt"]}
+  ],
+  "notes": "House recipe and a family favorite, served as the main dish, not a side. Usually spooned into bowls and topped with grilled salmon or roasted broccoli. Feeds about 10 with leftovers. The double boiler keeps the gentle heat that stops the yogurt and cheese from splitting."
+}
